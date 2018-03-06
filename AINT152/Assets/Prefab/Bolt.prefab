@@ -23,6 +23,8 @@ GameObject:
   - component: {fileID: 58652138681364040}
   - component: {fileID: 50510141955953466}
   - component: {fileID: 114234790982362386}
+  - component: {fileID: 114461736293325866}
+  - component: {fileID: 114748782802822020}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -92,6 +94,33 @@ MonoBehaviour:
   speed: 3
   theCamera: {fileID: 0}
   smoothing: 5
+  rb: {fileID: 0}
+--- !u!114 &114461736293325866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839348986818564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9562f680fc2a6b545890bb02ca9fc3fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  destroyTime: 1
+--- !u!114 &114748782802822020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1839348986818564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7da88d1862bb1045a82bf6f6ebe0587, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  damageTag: 
 --- !u!212 &212090259715330716
 SpriteRenderer:
   m_ObjectHideFlags: 1

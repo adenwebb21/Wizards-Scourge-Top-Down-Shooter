@@ -8,6 +8,8 @@ public class TopDownCharacterController2D : MonoBehaviour {
     Rigidbody2D rigidbody2D;
     Animator anim;
 
+    public Animator childAnim;
+
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
@@ -22,9 +24,11 @@ public class TopDownCharacterController2D : MonoBehaviour {
         if(x == 0 && y == 0)
         {
             anim.SetInteger("state", 0);
+            childAnim.SetInteger("state", 0);
         }
         else
         {
+            childAnim.SetInteger("state", 1);
             anim.SetInteger("state", 1);
         }
 

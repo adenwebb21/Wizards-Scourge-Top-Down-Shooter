@@ -3,13 +3,16 @@ using System.Collections;
 public class ShootBullet : MonoBehaviour
 {
     public GameObject bulletPrefab;
+    public Animator playerAnim;
     public Transform bulletSpawn;
     public float fireTime = 0.5f;
     private bool isFiring = false;
+
     void SetFiring()
     {
         isFiring = false;
     }
+
     void Fire()
     {
         isFiring = true;
@@ -20,6 +23,7 @@ public class ShootBullet : MonoBehaviour
         }
         Invoke("SetFiring", fireTime);
     }
+
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -30,4 +34,5 @@ public class ShootBullet : MonoBehaviour
             }
         }
     }
-}
+}
+

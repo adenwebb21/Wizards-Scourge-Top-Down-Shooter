@@ -15,6 +15,7 @@ public class ShootBullet : MonoBehaviour
 
     void Fire()
     {
+        playerAnim.SetTrigger("attack");
         isFiring = true;
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
         if (GetComponent<AudioSource>() != null)
@@ -30,6 +31,7 @@ public class ShootBullet : MonoBehaviour
         {
             if (!isFiring)
             {
+                
                 Fire();
             }
         }

@@ -315,6 +315,11 @@ Prefab:
       propertyPath: theCamera
       value: 
       objectReference: {fileID: 53315566}
+    - target: {fileID: 114055966184522052, guid: 726e25e88fa7da248bdc4a519dae2e62,
+        type: 2}
+      propertyPath: playerAnim
+      value: 
+      objectReference: {fileID: 1997801836}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 726e25e88fa7da248bdc4a519dae2e62, type: 2}
   m_IsPrefabParent: 0
@@ -391,6 +396,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1997801836 stripped
+Animator:
+  m_PrefabParentObject: {fileID: 95850305992500622, guid: 726e25e88fa7da248bdc4a519dae2e62,
+    type: 2}
+  m_PrefabInternal: {fileID: 115188224}
 --- !u!4 &2043738715 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4573374679667194, guid: 726e25e88fa7da248bdc4a519dae2e62,

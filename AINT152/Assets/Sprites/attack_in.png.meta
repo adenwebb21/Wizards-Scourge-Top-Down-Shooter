@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fc8904a018ee0a24998cc3d9921bdc88
-timeCreated: 1520364634
+timeCreated: 1520684917
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,7 @@ TextureImporter:
     21300010: attack_in_5
     21300012: attack_in_6
     21300014: attack_in_7
+    21300016: attack_in_8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -92,7 +93,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 192
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -106,7 +107,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
-        y: 192
+        y: 128
         width: 64
         height: 64
       alignment: 0
@@ -119,7 +120,7 @@ TextureImporter:
       name: attack_in_2
       rect:
         serializedVersion: 2
-        x: 0
+        x: 128
         y: 128
         width: 64
         height: 64
@@ -133,8 +134,8 @@ TextureImporter:
       name: attack_in_3
       rect:
         serializedVersion: 2
-        x: 64
-        y: 128
+        x: 0
+        y: 64
         width: 64
         height: 64
       alignment: 0
@@ -147,7 +148,7 @@ TextureImporter:
       name: attack_in_4
       rect:
         serializedVersion: 2
-        x: 0
+        x: 64
         y: 64
         width: 64
         height: 64
@@ -161,7 +162,7 @@ TextureImporter:
       name: attack_in_5
       rect:
         serializedVersion: 2
-        x: 64
+        x: 128
         y: 64
         width: 64
         height: 64
@@ -190,6 +191,20 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: attack_in_8
+      rect:
+        serializedVersion: 2
+        x: 128
         y: 0
         width: 64
         height: 64

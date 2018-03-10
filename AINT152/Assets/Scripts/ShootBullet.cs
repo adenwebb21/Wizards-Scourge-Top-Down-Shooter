@@ -6,23 +6,43 @@ public class ShootBullet : MonoBehaviour
     public Animator playerAnim;
     public Transform bulletSpawn;
     public float fireTime = 0.5f;
+    public float initialDelay = 0.07f;
     private bool isFiring = false;
 
     void SetFiring()
     {
-        isFiring = false;
+        if(Input.GetKey(KeyCode.Mouse0))
+        {
+            Invoke("Fire", fireTime);
+        }
+        else if(!Input.GetKey(KeyCode.Mouse0))
+        {
+            isFiring = false;
+            playerAnim.SetTrigger("attack_end");
+        }
+        
+    }
+
+    void CreateBolt()
+    {
+        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
     }
 
     void Fire()
-    {
-        playerAnim.SetTrigger("attack");
+    {  
         isFiring = true;
-        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+
+        Invoke("CreateBolt", initialDelay);
+
         if (GetComponent<AudioSource>() != null)
         {
             GetComponent<AudioSource>().Play();
         }
-        Invoke("SetFiring", fireTime);
+
+        Invoke("SetFiring", fireTime);    
+
+        
+        
     }
 
     void Update()
@@ -31,7 +51,7 @@ public class ShootBullet : MonoBehaviour
         {
             if (!isFiring)
             {
-                
+                playerAnim.SetTrigger("attack_start");
                 Fire();
             }
         }

@@ -188,8 +188,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 1839348986818564, guid: 7dcf29199d2b893409ca46fdcb089bb6,
     type: 2}
+  playerAnim: {fileID: 95850305992500622}
   bulletSpawn: {fileID: 4936162188731808}
   fireTime: 0.25
+  initialDelay: 0.25
 --- !u!114 &114495868472653284
 MonoBehaviour:
   m_ObjectHideFlags: 1

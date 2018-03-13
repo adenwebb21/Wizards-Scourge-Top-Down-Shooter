@@ -379,6 +379,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
+  explosionPrefab: {fileID: 1579295876882668, guid: 06696cb32b20505488933ae2bb836379,
+    type: 2}
+  adjustExplosionAngle: 270
 --- !u!50 &818322981
 Rigidbody2D:
   serializedVersion: 4
@@ -547,11 +550,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4475678868710286, guid: e9045ded033bd9042af693313a7a88dc, type: 2}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4475678868710286, guid: e9045ded033bd9042af693313a7a88dc, type: 2}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9045ded033bd9042af693313a7a88dc, type: 2}

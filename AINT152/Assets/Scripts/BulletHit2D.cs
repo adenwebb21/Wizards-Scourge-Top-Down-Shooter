@@ -12,4 +12,4 @@ public class BulletHit2D : MonoBehaviour
         }
         Destroy(gameObject);
     }
-}
+}

@@ -5,6 +5,7 @@ using UnityEngine;
 public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 5.0f;
+ 
     Rigidbody2D rigidbody2D;
     Animator anim;
 
@@ -33,7 +34,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(x, y) * speed;
-        rigidbody2D.angularVelocity = 0.0f;
+        rigidbody2D.angularVelocity = 0.0f;     
     }
 
 

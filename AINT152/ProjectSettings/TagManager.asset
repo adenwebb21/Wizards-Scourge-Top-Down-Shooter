@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -13,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Obstacles
   - 
   - 
   - 
@@ -52,4 +53,7 @@ TagManager:
     locked: 0
   - name: Shot
     uniqueID: 2551832497
+    locked: 0
+  - name: Obstacles
+    uniqueID: 3001551531
     locked: 0

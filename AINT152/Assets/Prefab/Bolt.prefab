@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 50510141955953466}
   - component: {fileID: 114234790982362386}
   - component: {fileID: 114461736293325866}
-  - component: {fileID: 114748782802822020}
   - component: {fileID: 95197905352985364}
+  - component: {fileID: 114919236050375370}
   m_Layer: 0
   m_Name: Bolt
   m_TagString: Untagged
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   destroyTime: 1
---- !u!114 &114748782802822020
+--- !u!114 &114919236050375370
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -137,8 +137,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7da88d1862bb1045a82bf6f6ebe0587, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 1
-  damageTag: 
+  damage: 2
+  damageTag: Enemy
 --- !u!212 &212090259715330716
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -171,7 +171,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1743134799
-  m_SortingLayer: 3
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 17ee4bc58d7d6f548a75ef5000de4d44, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

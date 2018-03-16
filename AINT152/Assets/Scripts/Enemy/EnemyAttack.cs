@@ -9,7 +9,7 @@ public class EnemyAttack : MonoBehaviour
     GameObject player;                  
     PlayerHealth playerHealth;          
     
-    bool playerInRange;                   
+    public bool playerInRange;                   
     float timer;                                
 
 
@@ -20,7 +20,7 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject == player)
         {
@@ -28,8 +28,7 @@ public class EnemyAttack : MonoBehaviour
         }
     }
 
-
-    void OnTriggerExit(Collider other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (other.gameObject == player)
         {

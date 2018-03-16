@@ -299,7 +299,7 @@
       <HintPath>Library\UnityAssemblies\UnityEditor.iOS.Extensions.Common.dll</HintPath>
     </Reference>
     <Reference Include="Pathfinding.Ionic.Zip.Reduced">
-      <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
+      <HintPath>Assets\AstarPathfindingProject\TurnBased\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -411,17 +411,19 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
-    <Compile Include="Assets\Scripts\Bullet2D.cs" />
-    <Compile Include="Assets\Scripts\BulletHit2D.cs" />
-    <Compile Include="Assets\Scripts\EnemyAttack.cs" />
-    <Compile Include="Assets\Scripts\EnemyBehaviour.cs" />
-    <Compile Include="Assets\Scripts\MouseSmoothLook2D.cs" />
-    <Compile Include="Assets\Scripts\MoveTowardsObject.cs" />
-    <Compile Include="Assets\Scripts\PlayerHealth.cs" />
-    <Compile Include="Assets\Scripts\ShootBullet.cs" />
-    <Compile Include="Assets\Scripts\SmoothFollow2D.cs" />
-    <Compile Include="Assets\Scripts\SmoothLookAtTarget.cs" />
-    <Compile Include="Assets\Scripts\TopDownCharacterController2D.cs" />
+    <Compile Include="Assets\Scripts\Bullet\Bullet2D.cs" />
+    <Compile Include="Assets\Scripts\Bullet\BulletHit2D.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyAttack.cs" />
+    <Compile Include="Assets\Scripts\Enemy\EnemyBehaviour.cs" />
+    <Compile Include="Assets\Scripts\Enemy\MoveTowardsObject.cs" />
+    <Compile Include="Assets\Scripts\Enemy\StopOverlapping.cs" />
+    <Compile Include="Assets\Scripts\Player\MouseSmoothLook2D.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInRange.cs" />
+    <Compile Include="Assets\Scripts\Player\ShootBullet.cs" />
+    <Compile Include="Assets\Scripts\Player\SmoothFollow2D.cs" />
+    <Compile Include="Assets\Scripts\Player\SmoothLookAtTarget.cs" />
+    <Compile Include="Assets\Scripts\Player\TopDownCharacterController2D.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
@@ -430,10 +432,10 @@
     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
-    <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
-    <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+    <None Include="Assets\AstarPathfindingProject\TurnBased\Plugins\DotNetZip\DotNetZipLicense.txt" />
+    <None Include="Assets\AstarPathfindingProject\TurnBased\Plugins\dependencies.txt" />
     <None Include="Assets\AstarPathfindingProject\link.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

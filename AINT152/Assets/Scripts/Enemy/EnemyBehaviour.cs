@@ -2,8 +2,7 @@
 using System.Collections;
 public class EnemyBehaviour : MonoBehaviour
 {
-    public int health = 10;
-    public int damage;
+    public int health = 100;
 
     public void TakeDamage(int damage)
     {

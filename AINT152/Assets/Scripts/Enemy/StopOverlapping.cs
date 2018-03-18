@@ -5,20 +5,24 @@ using Pathfinding;
 
 public class StopOverlapping : MonoBehaviour {
 
-    private AIDestinationSetter parentdestination;
-    private Vector3 randomcoord;
-    private Random r;
+    private AIDestinationSetter targetScript;
+    private Transform currentTarget;
+
+    private bool overlapping;
 
     private void Start()
     {
-        
+        targetScript = GetComponentInParent<AIDestinationSetter>();
+        currentTarget = targetScript.transform;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //currentTarget.position.x = currentTarget.position.x + 10;
+
         if(collision.CompareTag("EnemyRadius"))
-        { 
-            aipathparent.target = ;
+        {
+            overlapping = true;
         }
     }
 
@@ -26,7 +30,12 @@ public class StopOverlapping : MonoBehaviour {
     {
         if (collision.CompareTag("EnemyRadius"))
         {
-            aipathparent.maxSpeed = 2;
+            overlapping = false;
         }
+    }
+
+    private void Update()
+    {
+        
     }
 }

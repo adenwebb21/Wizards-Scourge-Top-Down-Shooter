@@ -58,7 +58,6 @@ GameObject:
   - component: {fileID: 4706763605562086}
   - component: {fileID: 58105914204200418}
   - component: {fileID: 114525426921463460}
-  - component: {fileID: 114698888939088442}
   m_Layer: 0
   m_Name: EnemyRadius
   m_TagString: EnemyRadius
@@ -73,7 +72,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1386937776438048}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.64, y: 5.27, z: -0.041986957}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4851393714464370}
@@ -208,7 +207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62698d0b367026a478feedb48cc86985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 20
 --- !u!114 &114541978745042934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -224,7 +223,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 2
+  maxSpeed: 3
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2
@@ -240,18 +239,6 @@ MonoBehaviour:
   alwaysDrawGizmos: 1
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
---- !u!114 &114698888939088442
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1914838743778706}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1167015624bfe43ad4b5da30d414a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  aipathparent: {fileID: 0}
 --- !u!114 &114822698590845084
 MonoBehaviour:
   m_ObjectHideFlags: 1

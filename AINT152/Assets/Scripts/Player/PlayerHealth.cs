@@ -4,21 +4,36 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int startingHealth = 100;                        
-    public int currentHealth;                                                                                                                                                   
+    public delegate void UpdateHealth(int newHealth);
+    public static event UpdateHealth OnUpdateHealth;
+
+    public int health = 100;
 
     void Start()
     {
-        currentHealth = startingHealth;
+        SendHealthData();
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int damage)
     {
-        currentHealth -= amount;
+        health -= damage;
+        SendHealthData();
 
-        if (currentHealth <= 0)
+        if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
     }
+    void Die()
+    {
+        gameObject.SetActive(false);
+    }
+
+    void SendHealthData()
+    {
+        if (OnUpdateHealth != null)
+        {
+            OnUpdateHealth(health);
+        }
+    }
 }

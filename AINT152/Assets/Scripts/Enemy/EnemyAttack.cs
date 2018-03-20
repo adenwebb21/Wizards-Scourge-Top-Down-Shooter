@@ -7,7 +7,9 @@ public class EnemyAttack : MonoBehaviour
     public int attackDamage = 10;               
                 
     GameObject player;                  
-    PlayerHealth playerHealth;          
+    PlayerHealth playerHealth;
+
+    Collider2D collision;
     
     public bool playerInRange;                   
     float timer;                                
@@ -22,6 +24,8 @@ public class EnemyAttack : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        collision = other;
+
         if (other.gameObject == player)
         {
             playerInRange = true;
@@ -50,9 +54,9 @@ public class EnemyAttack : MonoBehaviour
     {
         timer = 0f;
 
-        if (playerHealth.currentHealth > 0)
+        if (collision.gameObject.CompareTag("Player"))
         {
-            playerHealth.TakeDamage(attackDamage);
+            collision.gameObject.SendMessage("TakeDamage", attackDamage);
         }
     }
 }

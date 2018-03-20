@@ -10,6 +10,8 @@ public class EnemyBehaviour : MonoBehaviour
 
         if (health <= 0)
         {
+            GetComponent<AddScore>().DoSendScore();
+
             Destroy(transform.parent.gameObject);
         }
     }

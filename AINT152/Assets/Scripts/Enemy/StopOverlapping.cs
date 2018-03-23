@@ -5,37 +5,48 @@ using Pathfinding;
 
 public class StopOverlapping : MonoBehaviour {
 
-    private AIDestinationSetter targetScript;
-    private Transform currentTarget;
-
-    private bool overlapping;
+    AIPath pathStats;
+    public CircleCollider2D radiusCollider;
 
     private void Start()
     {
-        targetScript = GetComponentInParent<AIDestinationSetter>();
-        currentTarget = targetScript.transform;
+        pathStats = GetComponentInParent<AIPath>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void FixedUpdate()
     {
-        //currentTarget.position.x = currentTarget.position.x + 10;
 
-        if(collision.CompareTag("EnemyRadius"))
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "EnemyRadius")
         {
-            overlapping = true;
+            if (Random.Range(0, 1) == 0)
+            {
+                SlowDown();
+            }
+            else
+            {
+                collision.gameObject.GetComponent<StopOverlapping>().SlowDown();
+            }
         }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("EnemyRadius"))
-        {
-            overlapping = false;
-        }
-    }
-
-    private void Update()
-    {
         
+    }
+
+    void SlowDown()
+    {
+        if(pathStats.maxSpeed > 0)
+        {
+            pathStats.maxSpeed -= 0.2f;
+        }      
+    }
+
+    void SpeedUp()
+    {
+        if (pathStats.maxSpeed < 4)
+        {
+            pathStats.maxSpeed += 0.2f;
+        }     
     }
 }

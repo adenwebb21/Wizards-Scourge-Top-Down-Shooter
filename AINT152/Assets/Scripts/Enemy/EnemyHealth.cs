@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class EnemyBehaviour : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
 

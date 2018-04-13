@@ -3,6 +3,7 @@ SceneListBegin?
 Assets/Scenes/MainMenu.unity
 Assets/Scenes/Game.unity
 SceneListEnd?
+05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.LevelSelector
 790605e19831ace4cf8ae25a9753e510 Assembly-CSharp.dll:Pathfinding.ProceduralGridMover
 4f8bc11d610801c3bc53e3989bfa297a Assembly-CSharp.dll:.Bullet2D
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -18,7 +19,8 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 31aaf521b3ef8699466676591ea0efd4 UnityEngine.Timeline.dll:UnityEngine.Timeline.PlayableTrack
 df374c01140c2d578bf70cbd60073d1d UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 6c750baaa207bef3b36189c707465d4b Assembly-CSharp.dll:Pathfinding.Examples.ObjectPlacer
-8dbcfd183b9442e6f5c1422c6ef212f2 Assembly-CSharp.dll:.StopOverlapping
+9e4664aac7fc430cc90752eac8146d78 Assembly-CSharp.dll:.StopOverlapping
+a1e9bf0e81626b7971bf9ac98405f7d1 Assembly-CSharp.dll:.WaveController
 b940598787769c405c145e5a49d20389 Assembly-CSharp.dll:.BulletHit2D
 a35dc9cca2faebc5f5f1aeb9e8e47bbe UnityEngine.UI.dll:UnityEngine.UI.AspectRatioFitter
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.UI.dll:UnityEngine.EventSystems.BaseInput
@@ -116,7 +118,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 3f32f08a64daf40b09ed864d96fe3840 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransform
 73843688b51256aed059f049c540bca8 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformChild
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
-62aa8d5cad027c98b8de9deec9dc060b Assembly-CSharp.dll:.RandomSpawner
+f383e2a8846e13f8b9d14393e592db33 Assembly-CSharp.dll:.RandomSpawner
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 322cb40e1e282f28af980cbef7922a90 UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsEventTracker
 dc07d7ad69b399a46e92c483bf1c04ca UnityEngine.Analytics.dll:UnityEngine.Analytics.AnalyticsTracker

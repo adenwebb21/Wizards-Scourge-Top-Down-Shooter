@@ -4,26 +4,47 @@ using UnityEngine;
 
 public class RandomSpawner : MonoBehaviour {
 
-    private Transform[] spawners = new Transform[4];
     public GameObject enemy;
-    private Vector3 minBounds, maxBounds;
-
     public float Timer = 2;
+
+    public int numberOfEnemyInWave;
+
+    int enemyCount;
+
+    GameObject[] spawners;
+    GameObject chosenSpawner;
 
     GameObject enemyClone;
 
-
     private void Start()
     {
-        
+        spawners = GameObject.FindGameObjectsWithTag("SpawningLocation");
+    }
+
+    public void StartNewWave()
+    {
+        enemyCount = 0;
+        spawners = GameObject.FindGameObjectsWithTag("SpawningLocation");
     }
 
     void Update()
     {
         Timer -= Time.deltaTime;
+
+        chosenSpawner = spawners[Random.Range(0, spawners.Length)];
+
+        if(enemyCount < numberOfEnemyInWave)
+        {
+            CreateEnemy();
+        }   
+    }
+
+    private void CreateEnemy()
+    {
         if (Timer <= 0f)
         {
-            enemyClone = Instantiate(enemy, new Vector3(Random.Range(-9, 9), Random.Range(-9, 9), 0f), transform.rotation) as GameObject;
+            enemyClone = Instantiate(enemy, chosenSpawner.transform.position, transform.rotation) as GameObject;
+            enemyCount++;
             Timer = 2f;
         }
     }

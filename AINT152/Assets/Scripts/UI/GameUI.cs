@@ -1,15 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameUI : MonoBehaviour
 {
     private int health;
     private int score;
     private string gameInfo = "";
-    private Rect boxRect = new Rect(10, 10, 300, 50);
+    //private Rect boxRect = new Rect(10, 10, 300, 50);
 
-    public Transform canvas;
+    public Transform pauseMenu;
+    public Transform inGameStats;
+    public Text healthText;
+    public Text scoreText;
 
     void OnEnable()
     {
@@ -42,13 +46,14 @@ public class GameUI : MonoBehaviour
 
     void UpdateUI()
     {
-        gameInfo = "Score: " + score.ToString() + "\nHealth: " + health.ToString();
+        healthText.text = "Health: " + health.ToString();
+        scoreText.text = "Score: " + score.ToString();
     }
 
-    void OnGUI()
-    {
-        GUI.Box(boxRect, gameInfo);
-    }
+    //void OnGUI()
+    //{
+    //    GUI.Box(boxRect, gameInfo);
+    //}
 
     private void Update()
     {
@@ -60,14 +65,14 @@ public class GameUI : MonoBehaviour
 
     public void Pause()
     {
-        if (!canvas.gameObject.active)
+        if (!pauseMenu.gameObject.active)
         {
-            canvas.gameObject.SetActive(true);
+            pauseMenu.gameObject.SetActive(true);
             Time.timeScale = 0;
         }
         else
         {
-            canvas.gameObject.SetActive(false);
+            pauseMenu.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
     }

@@ -35,5 +35,6 @@ public class PlayerHealth : MonoBehaviour
         {
             OnUpdateHealth(health);
         }
-    }
+    }
+
 }

@@ -8,6 +8,8 @@ TagManager:
   - EnemyRadius
   - SpawningLocation
   - UI
+  - Pit
+  - Level
   layers:
   - Default
   - TransparentFX

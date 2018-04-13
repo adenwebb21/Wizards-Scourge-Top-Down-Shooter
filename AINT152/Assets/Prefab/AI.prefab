@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 114536012350726918}
   - component: {fileID: 50742835597538290}
   - component: {fileID: 114984578900194924}
-  - component: {fileID: 114528238070271042}
   m_Layer: 0
   m_Name: goblinwarrior
   m_TagString: Enemy
@@ -127,7 +126,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!58 &58105914204200418
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -198,18 +197,6 @@ MonoBehaviour:
   timeBetweenAttacks: 0.5
   attackDamage: 10
   playerInRange: 0
---- !u!114 &114528238070271042
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1475497670920076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1167015624bfe43ad4b5da30d414a5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayOrigin: {fileID: 0}
 --- !u!114 &114536012350726918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,7 +224,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 4
+  maxSpeed: 5
   gravity: {x: 0, y: 0, z: 0}
   groundMask:
     serializedVersion: 2

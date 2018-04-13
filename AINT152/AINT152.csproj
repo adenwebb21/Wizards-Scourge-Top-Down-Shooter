@@ -400,6 +400,8 @@
     <Compile Include="Assets\Scripts\Enemy\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Enemy\RandomSpawner.cs" />
     <Compile Include="Assets\Scripts\Enemy\StopOverlapping.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\LevelSelector.cs" />
+    <Compile Include="Assets\Scripts\Gameplay\WaveController.cs" />
     <Compile Include="Assets\Scripts\Player\MouseSmoothLook2D.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerInRange.cs" />

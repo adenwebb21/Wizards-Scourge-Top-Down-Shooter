@@ -410,6 +410,7 @@
     <Compile Include="Assets\Scripts\Player\SmoothLookAtTarget.cs" />
     <Compile Include="Assets\Scripts\Player\TopDownCharacterController2D.cs" />
     <Compile Include="Assets\Scripts\UI\AddScore.cs" />
+    <Compile Include="Assets\Scripts\UI\FadeIn.cs" />
     <Compile Include="Assets\Scripts\UI\GameUI.cs" />
     <Compile Include="Assets\Scripts\UI\TitleScreenUIManager.cs" />
   </ItemGroup>

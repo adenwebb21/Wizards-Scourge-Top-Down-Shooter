@@ -10,6 +10,10 @@ public class WaveController : MonoBehaviour {
     public LevelSelector levelSelector;
     public RandomSpawner randomSpawner;
 
+    private GameObject playerSpawner;
+
+    private GameObject player;
+
     private void Start()
     {
 
@@ -26,6 +30,10 @@ public class WaveController : MonoBehaviour {
 
             randomSpawner.numberOfEnemyInWave = enemiesRemaining;
             randomSpawner.StartNewWave();
+
+            playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
+            player = GameObject.Find("Player");
+            player.transform.position = playerSpawner.transform.position;
         }
     }
 

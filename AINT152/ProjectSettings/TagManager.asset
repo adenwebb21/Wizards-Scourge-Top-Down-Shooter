@@ -10,6 +10,7 @@ TagManager:
   - UI
   - Pit
   - Level
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX

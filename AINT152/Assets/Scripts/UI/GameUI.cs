@@ -7,13 +7,18 @@ public class GameUI : MonoBehaviour
 {
     private int health;
     private int score;
+
     private string gameInfo = "";
     //private Rect boxRect = new Rect(10, 10, 300, 50);
 
     public Transform pauseMenu;
+    public Transform deathScreen;
     public Transform inGameStats;
+
     public Text healthText;
     public Text scoreText;
+
+    public bool playerDead = false;
 
     void OnEnable()
     {
@@ -60,6 +65,20 @@ public class GameUI : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.Escape))
         {
             Pause();
+        }
+
+        if(playerDead)
+        {
+            Time.timeScale = 0.2f;
+            deathScreen.gameObject.SetActive(true);
+            deathScreen.gameObject.GetComponentsInChildren<Text>()[1].text = "Score: " + score.ToString();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space) && playerDead)
+        {
+            playerDead = false;
+            Time.timeScale = 1f;
+            deathScreen.gameObject.SetActive(false);
         }
     }
 

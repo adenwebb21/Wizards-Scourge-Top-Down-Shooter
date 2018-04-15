@@ -22,13 +22,14 @@ public class LevelSelector : MonoBehaviour {
         {
             if(level == chosenLevel)
             {
-                level.gameObject.SetActive(true);
-                AstarPath.active.Scan();
+                level.gameObject.SetActive(true); 
             }
             else
             {
                 level.gameObject.SetActive(false);
             }
         }
+
+        AstarPath.active.Scan();
     }
 }

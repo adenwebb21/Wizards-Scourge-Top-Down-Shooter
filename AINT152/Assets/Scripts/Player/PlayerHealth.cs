@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public delegate void UpdateHealth(int newHealth);
     public static event UpdateHealth OnUpdateHealth;
 
+    public GameUI ui;
+
     public int health = 100;
 
     void Start()
@@ -27,6 +29,7 @@ public class PlayerHealth : MonoBehaviour
     void Die()
     {
         gameObject.SetActive(false);
+        ui.playerDead = true;
     }
 
     void SendHealthData()
@@ -35,6 +38,11 @@ public class PlayerHealth : MonoBehaviour
         {
             OnUpdateHealth(health);
         }
+    }
+
+    public void ResetPlayer()
+    {
+
     }
 
 }

@@ -9,6 +9,7 @@ public class WaveController : MonoBehaviour {
 
     public LevelSelector levelSelector;
     public RandomSpawner randomSpawner;
+    public GameUI uiManager;
 
     private GameObject playerSpawner;
 
@@ -21,24 +22,37 @@ public class WaveController : MonoBehaviour {
 
     private void Update()
     {
-        if(enemiesRemaining == 0)
+        if(enemiesRemaining == 0 && currentWave!= 0)
+        {
+            uiManager.waveVictory = true;
+
+            currentWave++;
+            enemiesRemaining = currentWave + 4;
+        }
+
+        if(currentWave == 0)
         {
             currentWave++;
             enemiesRemaining = currentWave + 4;
 
-            levelSelector.SetLevel();
-
-            randomSpawner.numberOfEnemyInWave = enemiesRemaining;
-            randomSpawner.StartNewWave();
-
-            playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
-            player = GameObject.Find("Player");
-            player.transform.position = playerSpawner.transform.position;
+            LoadNextLevel();
         }
     }
 
     public void ReduceEnemies()
     {
         enemiesRemaining--;
+    }
+
+    public void LoadNextLevel()
+    {
+        levelSelector.SetLevel();
+
+        randomSpawner.numberOfEnemyInWave = enemiesRemaining;
+        randomSpawner.StartNewWave();
+
+        playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
+        player = GameObject.Find("Player");
+        player.transform.position = playerSpawner.transform.position;
     }
 }

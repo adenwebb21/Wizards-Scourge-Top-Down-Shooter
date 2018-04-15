@@ -11,7 +11,7 @@ public class BulletHit2D : MonoBehaviour
         {
             other.SendMessage("TakeDamage", damage);
         }
-        if(!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit"))
+        if(!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit") && !other.CompareTag("Untagged"))
         {
             Destroy(gameObject);
         }

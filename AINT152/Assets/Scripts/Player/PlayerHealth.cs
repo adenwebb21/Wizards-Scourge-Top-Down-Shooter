@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
     public delegate void UpdateHealth(int newHealth);
     public static event UpdateHealth OnUpdateHealth;
 
+    GameObject playerSpawner;
+
     public GameUI ui;
 
     public int health = 100;
@@ -37,6 +39,17 @@ public class PlayerHealth : MonoBehaviour
         if (OnUpdateHealth != null)
         {
             OnUpdateHealth(health);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag == "Pit")
+        {
+            TakeDamage(health / 2);
+
+            playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
+            this.transform.position = playerSpawner.transform.position;
         }
     }
 

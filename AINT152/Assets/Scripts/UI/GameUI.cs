@@ -13,12 +13,16 @@ public class GameUI : MonoBehaviour
 
     public Transform pauseMenu;
     public Transform deathScreen;
+    public Transform waveScreen;
     public Transform inGameStats;
 
     public Text healthText;
     public Text scoreText;
 
+    public WaveController controller;
+
     public bool playerDead = false;
+    public bool waveVictory = false;
 
     void OnEnable()
     {
@@ -79,6 +83,22 @@ public class GameUI : MonoBehaviour
             playerDead = false;
             Time.timeScale = 1f;
             deathScreen.gameObject.SetActive(false);
+            SceneManager.LoadScene("Game");
+        }
+
+        if(waveVictory)
+        {
+            waveScreen.gameObject.SetActive(true);
+            Time.timeScale = 0.2f;
+        }
+
+        if(waveVictory && Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 1f;
+            waveVictory = false;
+            waveScreen.gameObject.SetActive(false);
+
+            controller.LoadNextLevel();
         }
     }
 

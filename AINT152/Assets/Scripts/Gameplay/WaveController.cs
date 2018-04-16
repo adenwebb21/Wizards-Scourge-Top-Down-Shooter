@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour {
 
-    int currentWave = 0;
+    public int currentWave = 0;
     public int enemiesRemaining;
 
     public LevelSelector levelSelector;
@@ -27,13 +27,13 @@ public class WaveController : MonoBehaviour {
             uiManager.waveVictory = true;
 
             currentWave++;
-            enemiesRemaining = currentWave + 4;
+            enemiesRemaining = currentWave + Random.Range(1, 5);
         }
 
         if(currentWave == 0)
         {
             currentWave++;
-            enemiesRemaining = currentWave + 4;
+            enemiesRemaining = currentWave + Random.Range(1, 5);
 
             LoadNextLevel();
         }
@@ -46,6 +46,13 @@ public class WaveController : MonoBehaviour {
 
     public void LoadNextLevel()
     {
+        GameObject[] allShots = GameObject.FindGameObjectsWithTag("Bolt");
+
+        foreach (GameObject obj in allShots)
+        {
+            Destroy(obj);
+        }
+
         levelSelector.SetLevel();
 
         randomSpawner.numberOfEnemyInWave = enemiesRemaining;

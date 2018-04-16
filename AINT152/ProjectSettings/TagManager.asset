@@ -11,6 +11,8 @@ TagManager:
   - Pit
   - Level
   - PlayerSpawn
+  - Wall
+  - Bolt
   layers:
   - Default
   - TransparentFX

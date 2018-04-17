@@ -38,10 +38,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4851393714464370}
   - component: {fileID: 212164045521567310}
-  - component: {fileID: 70435232627787490}
   - component: {fileID: 114536012350726918}
   - component: {fileID: 50742835597538290}
   - component: {fileID: 114984578900194924}
+  - component: {fileID: 70760054947443592}
   m_Layer: 0
   m_Name: goblinwarrior
   m_TagString: Enemy
@@ -142,7 +142,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!70 &70435232627787490
+--- !u!70 &70760054947443592
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -154,8 +154,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.05, y: 0}
-  m_Size: {x: 0.43, y: 0.56}
+  m_Offset: {x: 0.03, y: 0}
+  m_Size: {x: 0.44, y: 0.61}
   m_Direction: 0
 --- !u!114 &114116085491824266
 MonoBehaviour:

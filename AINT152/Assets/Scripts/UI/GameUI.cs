@@ -39,6 +39,7 @@ public class GameUI : MonoBehaviour
     void Start()
     {
         UpdateUI();
+        Time.timeScale = 1;
     }
 
     void HandleonUpdateHealth(int newHealth)

@@ -8,11 +8,15 @@ public class EnemyAttack : MonoBehaviour
                 
     GameObject player;                  
     PlayerHealth playerHealth;
+    public Animator enemyAnimator;
 
     Collider2D collision;
     
     public bool playerInRange;                   
-    float timer;                                
+    float timer;
+    bool isSwordInStartingPos = false;
+
+    private int animationAttackState;
 
 
     void Start()
@@ -29,6 +33,7 @@ public class EnemyAttack : MonoBehaviour
         if (other.gameObject == player)
         {
             playerInRange = true;
+            enemyAnimator.SetBool("isAttacking", true);
         }
     }
 
@@ -37,6 +42,7 @@ public class EnemyAttack : MonoBehaviour
         if (other.gameObject == player)
         {
             playerInRange = false;
+            enemyAnimator.SetBool("isAttacking", false);
         }
     }
 
@@ -53,6 +59,32 @@ public class EnemyAttack : MonoBehaviour
     void Attack()
     {
         timer = 0f;
+
+        animationAttackState = enemyAnimator.GetInteger("attackoption");
+
+        if(isSwordInStartingPos)
+        {
+            enemyAnimator.SetInteger("attackoption", 1);
+        }
+        else if(!isSwordInStartingPos)
+        {
+            enemyAnimator.SetInteger("attackoption", 2);
+        }
+
+        isSwordInStartingPos = !isSwordInStartingPos;
+
+        //if(animationAttackState == 0)
+        //{
+        //    enemyAnimator.SetInteger("attackoption", 1);
+        //}
+        //else if (animationAttackState == 1)
+        //{
+        //    enemyAnimator.SetInteger("attackoption", 2);
+        //}
+        //else if (animationAttackState == 2)
+        //{
+        //    enemyAnimator.SetInteger("attackoption", 1);
+        //}
 
         if (collision.gameObject.CompareTag("Player"))
         {

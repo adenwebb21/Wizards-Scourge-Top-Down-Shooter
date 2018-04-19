@@ -4,23 +4,36 @@ public class BulletHit2D : MonoBehaviour
 {
     public int damage = 1;
     public string damageTag = "";
-    public GameObject particles;
 
-    private void Start()
-    {
-        particles = GameObject.Find("BoltHitParticle");
-    }
+    public GameObject shotPos;
+    public GameObject emitter;
+
+    private Transform newPos;
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(damageTag))
         {
             other.SendMessage("TakeDamage", damage);
         }
-        if(!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit") && !other.CompareTag("Untagged"))
+
+        if (other.CompareTag(damageTag))
         {
             Destroy(gameObject);
-            Instantiate(particles.GetComponent<ParticleEmitter>());
         }
-       
+
+        if (!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit") && !other.CompareTag("Untagged"))
+        {
+            CreateEffect();
+            gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            gameObject.GetComponent<CircleCollider2D>().enabled = false;
+            //Destroy(gameObject);
+        }  
+    }
+
+    void CreateEffect()
+    {
+        newPos = shotPos.transform;
+        Instantiate(emitter, newPos);
     }
 }

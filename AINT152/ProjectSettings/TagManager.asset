@@ -13,6 +13,7 @@ TagManager:
   - PlayerSpawn
   - Wall
   - Bolt
+  - BoltImpact
   layers:
   - Default
   - TransparentFX

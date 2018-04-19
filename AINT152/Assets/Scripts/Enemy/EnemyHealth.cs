@@ -5,6 +5,7 @@ public class EnemyHealth : MonoBehaviour
     public int health = 100;
     private GameObject camera;
     private WaveController controller;
+    public GameObject emitter;
 
     private void Start()
     {

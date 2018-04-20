@@ -16,8 +16,11 @@ public class GameUI : MonoBehaviour
     public Transform waveScreen;
     public Transform inGameStats;
 
+    public ManageUpgradeScreen upgradeScreenScript;
+
     public Text healthText;
     public Text scoreText;
+    public Text waveText;
 
     public WaveController controller;
 
@@ -39,6 +42,7 @@ public class GameUI : MonoBehaviour
     void Start()
     {
         UpdateUI();
+        waveText.text = "Wave: 1";
         Time.timeScale = 1;
     }
 
@@ -58,6 +62,7 @@ public class GameUI : MonoBehaviour
     {
         healthText.text = "Health: " + health.ToString();
         scoreText.text = "Score: " + score.ToString();
+        waveText.text = "Wave: " + controller.currentWave.ToString();
     }
 
     //void OnGUI()
@@ -90,11 +95,23 @@ public class GameUI : MonoBehaviour
         if(waveVictory)
         {
             waveScreen.gameObject.SetActive(true);
+
+            if(controller.currentWave % 6 == 0)
+            {
+                upgradeScreenScript.EnableUpgradeScreen();
+            }
+            else
+            {
+                upgradeScreenScript.DisableUpgradeScreen();
+            }
+
             Time.timeScale = 0.2f;
         }
 
         if(waveVictory && Input.GetKeyDown(KeyCode.Space))
         {
+            UpdateUI();
+
             Time.timeScale = 1f;
             waveVictory = false;
             waveScreen.gameObject.SetActive(false);

@@ -5,22 +5,23 @@ public class ShootBullet : MonoBehaviour
     public GameObject bulletPrefab;
     public Animator playerAnim;
     public Transform bulletSpawn;
+
     public float fireTime = 0.5f;
     public float initialDelay = 0.07f;
     private bool isFiring = false;
 
     void SetFiring()
     {
-        if(Input.GetKey(KeyCode.Mouse0))
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             Invoke("Fire", fireTime);
         }
-        else if(!Input.GetKey(KeyCode.Mouse0))
+        else if (!Input.GetKey(KeyCode.Mouse0))
         {
             isFiring = false;
             playerAnim.SetTrigger("attack_end");
         }
-        
+
     }
 
     void CreateBolt()

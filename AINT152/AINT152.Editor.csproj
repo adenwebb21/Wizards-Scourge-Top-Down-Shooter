@@ -342,6 +342,7 @@
     <None Include="Assets\AstarPathfindingProject\TurnBased\Plugins\DotNetZip\DotNetZipLicense.txt" />
     <None Include="Assets\AstarPathfindingProject\TurnBased\Plugins\dependencies.txt" />
     <None Include="Assets\AstarPathfindingProject\link.xml" />
+    <None Include="Assets\Scripts\Utilities\DefaultColorFlash.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

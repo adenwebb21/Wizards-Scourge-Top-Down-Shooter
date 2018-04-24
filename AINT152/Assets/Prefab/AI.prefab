@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 114984578900194924}
   - component: {fileID: 70760054947443592}
   - component: {fileID: 95771542694731148}
+  - component: {fileID: 114648095951033562}
   m_Layer: 0
   m_Name: goblinwarrior
   m_TagString: Enemy
@@ -277,6 +278,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 20
   emitter: {fileID: 1147251794402574, guid: a7a43c7c8ec9b824fb708ea043da21f7, type: 2}
+  healthDrop: {fileID: 1836696555515246, guid: b7632d4559a40b440a0991e65be8f770, type: 2}
+  onTakeDamage:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 114648095951033562}
+        m_MethodName: DoDamageFlash
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
 --- !u!114 &114541978745042934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -308,6 +326,18 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
+--- !u!114 &114648095951033562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1475497670920076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2644593468cb6e4883f81b08fda5f37, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: 96a484ba0f168604bbaeb4c4459dcec0, type: 2}
 --- !u!114 &114822698590845084
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -19,7 +19,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4936162188731808}
-  - component: {fileID: 114950548532198092}
   m_Layer: 0
   m_Name: ShotSpawner
   m_TagString: Untagged
@@ -53,12 +52,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4573374679667194}
   - component: {fileID: 50427564956476898}
+  - component: {fileID: 70608415413703626}
+  - component: {fileID: 212927896215489196}
+  - component: {fileID: 95850305992500622}
   - component: {fileID: 114495868472653284}
   - component: {fileID: 114558789990317184}
-  - component: {fileID: 212927896215489196}
-  - component: {fileID: 70608415413703626}
   - component: {fileID: 114055966184522052}
-  - component: {fileID: 95850305992500622}
   - component: {fileID: 114570691328538528}
   m_Layer: 0
   m_Name: Player
@@ -233,19 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
-  health: 100
---- !u!114 &114950548532198092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1200225720829846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c4fc79d43ccb63f4e938fdfc077d5127, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emitter: {fileID: 1147251794402574, guid: a7a43c7c8ec9b824fb708ea043da21f7, type: 2}
+  health: 10000000
 --- !u!212 &212019075611812146
 SpriteRenderer:
   m_ObjectHideFlags: 1

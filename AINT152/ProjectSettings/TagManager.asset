@@ -14,6 +14,7 @@ TagManager:
   - Wall
   - Bolt
   - BoltImpact
+  - Pickup
   layers:
   - Default
   - TransparentFX
@@ -53,6 +54,9 @@ TagManager:
     locked: 0
   - name: Ground
     uniqueID: 1356639885
+    locked: 0
+  - name: Pickups
+    uniqueID: 927544663
     locked: 0
   - name: Enemies
     uniqueID: 595111305

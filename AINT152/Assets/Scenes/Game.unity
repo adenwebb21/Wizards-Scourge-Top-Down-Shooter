@@ -204,7 +204,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5.921875
+  orthographic size: 3.3515625
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -970,7 +970,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1293415765
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -2422,7 +2422,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1293415765
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -3254,7 +3254,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAAIewCrZKAPAIAAM4EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VMmS2jAQ/RVK55DCbDOTWwIMyYGBGpLKxRfZamMVsuTSMmzFv6cl29iQmhPN69fL6275Qrg0JaRW6aXmbKUYkG894m3ypUdo8L1TyxXCESLcqAKs5ul3uROeO0DQSZ4pXSzYDmbKWINwRoUBdGllfbRE6NIjR/zpv/iQE1rDJ2+d0XoZ9K5opiAt6JbaEBtaxXIyFbQogW35GVryaNikHQeaRC01Y/B14rMrIbipeyH2VAap2zIHDV4s4xSlhfpeaQ58l1ufrxu7zjIDtu5J09Oca5xQlZT8UDb3mQpq9lVjH1Q4X2Y4mYamqqSr//z9KLgzrYqfTd1o4GvYnKf7d3pKqbGduXbh+X3jTh6o2NNEwN8c5JtaauUkQ6fVzoc6A8N5+/cmbZZDum/xqtUH0JWfb8druAb1x5ngRRIGP66ArVBh3GH3oHE1v7DhcBmmToGo7+KPgd901z2h2vHKtbHoqlVK316inPZUsggz82qcnSktQXczlCCpsKcN5rGPO3zwfR71Sv0rqavXvuYRPIQEuOUPBg+ujTrctmVydViBydfOCi6hHbV3vOGgZkrK6sS6kpqwrdMZTTthO8fZ/W2RcUSnz9nzFACiJB0l/Sh7ojSiLEkmLB0NxyQcH5eok4pN1Wg9HlybbJNLPLTm+9BbalqGc2eaHpb8XCjTMrnM1DbVAHJ9l8GAxhr4LNmCcZzPFqzlMuybXGIiVLoHFt/4cRC6OFpN41Z9TEr+oaxHYjILH42YXMn1H1BLAwQUAAAICAAAACHs0+zuy20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9QzNNJRUEovSizIKAaKGII4pZkpIHa0kolhoplFmoVZamqqYVKycZKuYZp5YqJhYkpSkmlKsrGRiVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAACHsAq2SgDwCAADOBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHs0+zuy20AAAB4AAAACQAkAAAAAAAAAAAAAACJAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAEEDAAAAAA==
+    dataString: UEsDBBQAAAgIAAAAIew9JSU0PwIAAM8EAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQF1VE1z2jAQ/SuMzqVjEyBJby0Q2gOBCe304otsrbEGWfLoI3xk+O9dyTY2dHJCvH27em935Q/Cpakgs0ovNWcrxYB8GxB/Jl8GhIbYG7VcIRwjwo0qwWqefZc74bkRgk7yXOlywXYwU8YahHMqDGBIK+uzJUIfA3LEn+GzTznhafToT2c8PUeDCx4zkBZ0R22JLa1mOZkJWlbAtvwMHTmeNux4FGgSvTSM6Oto4ssrIbhpxBB7qoLXbVWABu+WcYreggBvtQC+K6zX2c9d57kB24jS9DTnGltUFyU/lC18pZKafa3snQrnrxlNpkFVXXT1X3wYh3CuVfmzvTeO/B224Nn+jZ4yamyvsX14fivcyQMVe5oK+FuAfFVLrZxkGLTa+VRnYDTv/l6tzQrI9h1eS70DXfX5eLyHS3B/nAlepqHz4xrYChXaHYYPGmfzCwWH1TBNCUS9ij8GftNdf4eawAvXxmKocSm9vFQ57alkEXrm3Tg7U1qC7leoQFJhTxusY+9neBf7POuF+mfS3N7E2ldwlxLgjh9Fd6GNOlynZQp1WIEp1s4KLqFrtQ+8YqNmSsp6xfqW2rSt0znNemk7x9ntbpFxTKdP+dMUAOI0e0iHcf5IaUxZmk5Y9jAak7B8XKJPKja10KY9ODbZFZe4aO0HYrDUtArrzjQ9LPm5VKZjcpmrbaYB5PqmggGNd+C7ZAvGsT9bsJbLMG/ykRChsj2w5MpPgtHF0WqadO4TUvF3ZT2SkFn4aiTkQi7/AFBLAwQUAAAICAAAACHs0+zuy20AAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9QzNNJRUEovSizIKAaKGII4pZkpIHa0kolhoplFmoVZamqqYVKycZKuYZp5YqJhYkpSkmlKsrGRiVIsUH1JZUGqX2JuKkRPQGJJRlpmXkpmXrqee1FmijvIaKXYWgBQSwECLQAUAAAICAAAACHsPSUlND8CAADPBAAACwAkAAAAAAAAAAAAAAAAAAAAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwECLQAUAAAICAAAACHs0+zuy20AAAB4AAAACQAkAAAAAAAAAAAAAACMAgAAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsFBgAAAAACAAIAuAAAAEQDAAAAAA==
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -3353,7 +3353,7 @@ GameObject:
   - component: {fileID: 573190887}
   m_Layer: 8
   m_Name: Obstacles
-  m_TagString: Untagged
+  m_TagString: Pit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12775,7 +12775,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1293415765
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_MaxChunkCount: 16
@@ -15559,6 +15559,11 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 483110795}
+    - target: {fileID: 114570691328538528, guid: 726e25e88fa7da248bdc4a519dae2e62,
+        type: 2}
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 726e25e88fa7da248bdc4a519dae2e62, type: 2}
   m_IsPrefabParent: 0

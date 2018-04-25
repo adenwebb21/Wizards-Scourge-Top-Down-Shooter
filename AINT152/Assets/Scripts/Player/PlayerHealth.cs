@@ -12,6 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public GameUI ui;
 
     public int health = 100;
+    public int maxHealth = 100;
 
     void Start()
     {
@@ -28,6 +29,18 @@ public class PlayerHealth : MonoBehaviour
             Die();
         }
     }
+
+    public void HealthPotion(int healthRegained)
+    {
+        health += healthRegained;
+        SendHealthData();
+
+        if (health >= maxHealth - 10 && health != maxHealth)
+        {
+            health = maxHealth;
+        }
+    }
+
     void Die()
     {
         gameObject.SetActive(false);

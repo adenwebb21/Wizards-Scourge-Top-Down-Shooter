@@ -47,8 +47,14 @@ public class WaveController : MonoBehaviour {
     public void LoadNextLevel()
     {
         GameObject[] allShots = GameObject.FindGameObjectsWithTag("Bolt");
+        GameObject[] allPickups = GameObject.FindGameObjectsWithTag("Pickup");
 
         foreach (GameObject obj in allShots)
+        {
+            Destroy(obj);
+        }
+
+        foreach (GameObject obj in allPickups)
         {
             Destroy(obj);
         }

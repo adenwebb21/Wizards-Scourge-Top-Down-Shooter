@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public GameUI ui;
 
     public int health = 100;
-    public int maxHealth = 100;
+    private int maxHealth = 100;
 
     void Start()
     {
@@ -32,13 +32,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthPotion(int healthRegained)
     {
-        health += healthRegained;
-        SendHealthData();
-
         if (health >= maxHealth - 10 && health != maxHealth)
         {
             health = maxHealth;
         }
+
+        health += healthRegained;
+        SendHealthData();
     }
 
     void Die()
@@ -59,7 +59,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.collider.tag == "Pit")
         {
-            TakeDamage(health / 2);
+            TakeDamage(30);
 
             playerSpawner = GameObject.FindGameObjectWithTag("PlayerSpawn");
             this.transform.position = playerSpawner.transform.position;

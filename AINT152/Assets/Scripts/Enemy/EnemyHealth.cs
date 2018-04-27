@@ -37,13 +37,26 @@ public class EnemyHealth : MonoBehaviour
 
     void DropStuff()
     {
-        if(Random.Range(0, 10) <= 5)
+        if(Random.Range(0, 100) <= 50)
         {
-            for (int i = 0; i < Random.Range(1, 4); i++)
+            if(Random.Range(0, 100) <= 80)
             {
-                Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
-            }               
-        }
-        
+                Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));               
+            }
+            else if(Random.Range(0, 100) <= 95)
+            {
+                for (int i = 0; i < Random.Range(1, 3); i++)
+                {
+                    Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+                }
+            }
+            else
+            {
+                for (int i = 0; i < Random.Range(1, 4); i++)
+                {
+                    Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
+                }
+            }
+        }        
     }
 }

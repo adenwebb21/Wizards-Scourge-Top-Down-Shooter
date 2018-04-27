@@ -96,7 +96,7 @@ public class GameUI : MonoBehaviour
         {
             waveScreen.gameObject.SetActive(true);
 
-            if(controller.currentWave % 6 == 0)
+            if((controller.currentWave - 1) % 5 == 0)
             {
                 upgradeScreenScript.EnableUpgradeScreen();
             }

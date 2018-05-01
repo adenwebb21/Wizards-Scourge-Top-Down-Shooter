@@ -58,7 +58,7 @@ public class GameUI : MonoBehaviour
         UpdateUI();
     }
 
-    void UpdateUI()
+    public void UpdateUI()
     {
         healthText.text = "Health: " + health.ToString();
         scoreText.text = "Score: " + score.ToString();

@@ -12,7 +12,7 @@ public class PlayerHealth : MonoBehaviour
     public GameUI ui;
 
     public int health = 100;
-    private int maxHealth = 100;
+    public int maxHealth = 100;
 
     void Start()
     {
@@ -39,6 +39,12 @@ public class PlayerHealth : MonoBehaviour
             health = maxHealth;
         }
       
+        SendHealthData();
+    }
+
+    public void RefillHealth()
+    {
+        health = maxHealth;
         SendHealthData();
     }
 

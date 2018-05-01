@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveController : MonoBehaviour {
 
-    public int currentWave = 0;
+    public int currentWave = 1;
     public int enemiesRemaining;
 
     public LevelSelector levelSelector;

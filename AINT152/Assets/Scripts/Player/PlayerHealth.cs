@@ -32,12 +32,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthPotion(int healthRegained)
     {
+        health += healthRegained;
+
         if (health >= maxHealth - 10 && health != maxHealth)
         {
             health = maxHealth;
         }
-
-        health += healthRegained;
+      
         SendHealthData();
     }
 

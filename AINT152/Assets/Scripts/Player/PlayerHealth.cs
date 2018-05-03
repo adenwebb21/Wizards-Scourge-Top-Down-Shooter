@@ -12,11 +12,12 @@ public class PlayerHealth : MonoBehaviour
     public GameUI ui;
 
     public int health = 100;
-    public int maxHealth = 100;
+    private int maxHealth;
 
     void Start()
     {
         SendHealthData();
+        maxHealth = 100;
     }
 
     public void TakeDamage(int damage)
@@ -32,11 +33,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthPotion(int healthRegained)
     {
-        health += healthRegained;
-
         if (health >= maxHealth - 10 && health != maxHealth)
         {
             health = maxHealth;
+        }
+        else
+        {
+            health += healthRegained;
         }
       
         SendHealthData();
@@ -45,6 +48,12 @@ public class PlayerHealth : MonoBehaviour
     public void RefillHealth()
     {
         health = maxHealth;
+        SendHealthData();
+    }
+
+    public void IncreaseMaxHealth()
+    {
+        maxHealth += 50;
         SendHealthData();
     }
 

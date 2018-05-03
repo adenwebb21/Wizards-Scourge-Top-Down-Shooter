@@ -22,7 +22,10 @@ public class GameUI : MonoBehaviour
     public Text scoreText;
     public Text waveText;
 
+    public Text pressSpaceText;
+
     public WaveController controller;
+    public UpgradeController upgradeController;
 
     public bool playerDead = false;
     public bool waveVictory = false;
@@ -94,11 +97,13 @@ public class GameUI : MonoBehaviour
 
         if(waveVictory)
         {
+            pressSpaceText.text = "Press space to begin next wave";
             waveScreen.gameObject.SetActive(true);
 
             if((controller.currentWave - 1) % 5 == 0)
             {
                 upgradeScreenScript.EnableUpgradeScreen();
+                pressSpaceText.text = "Press space to confirm your choice";
             }
             else
             {
@@ -111,6 +116,7 @@ public class GameUI : MonoBehaviour
         if(waveVictory && Input.GetKeyDown(KeyCode.Space))
         {
             UpdateUI();
+            upgradeController.ActivateSelection();
 
             Time.timeScale = 1f;
             waveVictory = false;

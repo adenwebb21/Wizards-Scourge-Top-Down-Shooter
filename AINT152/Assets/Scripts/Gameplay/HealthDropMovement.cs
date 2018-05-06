@@ -6,6 +6,8 @@ public class HealthDropMovement : MonoBehaviour {
 
     public float speed = 5000f;
 
+    private PlayerHealth health;
+
     private void Start()
     {
         GetComponent<Rigidbody2D>().AddForce(transform.up * speed);
@@ -32,12 +34,14 @@ public class HealthDropMovement : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        health = collision.gameObject.GetComponent<PlayerHealth>();
+
         if (collision.gameObject.tag == "Pit" || collision.gameObject.tag == "Wall")
         {
             GetComponent<Rigidbody2D>().drag += 50;
         }
 
-        if (collision.gameObject.tag == "Player" && collision.gameObject.GetComponent<PlayerHealth>().health != 100)
+        if (collision.gameObject.tag == "Player" && health.health != health.maxHealth)
         {
             collision.gameObject.SendMessage("HealthPotion", 10);
             Destroy(gameObject);

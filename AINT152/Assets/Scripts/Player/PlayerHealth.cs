@@ -11,13 +11,14 @@ public class PlayerHealth : MonoBehaviour
 
     public GameUI ui;
 
-    public int health = 100;
-    private int maxHealth;
+    public int health;
+    public int maxHealth;
 
     void Start()
     {
         SendHealthData();
         maxHealth = 100;
+        health = 100;
     }
 
     public void TakeDamage(int damage)

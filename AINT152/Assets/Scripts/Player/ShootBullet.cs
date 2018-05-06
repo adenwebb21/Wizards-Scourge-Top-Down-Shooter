@@ -6,9 +6,17 @@ public class ShootBullet : MonoBehaviour
     public Animator playerAnim;
     public Transform bulletSpawn;
 
+    private AudioSource shotSound;
+
     public float fireTime = 0.5f;
     public float initialDelay = 0.07f;
     private bool isFiring = false;
+
+
+    private void Start()
+    {
+        shotSound = gameObject.GetComponent<AudioSource>();
+    }
 
     void SetFiring()
     {
@@ -32,6 +40,8 @@ public class ShootBullet : MonoBehaviour
     void Fire()
     {  
         isFiring = true;
+
+        shotSound.PlayDelayed(initialDelay);
 
         Invoke("CreateBolt", initialDelay);
 

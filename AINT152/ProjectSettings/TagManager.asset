@@ -73,3 +73,6 @@ TagManager:
   - name: Particles
     uniqueID: 786936329
     locked: 0
+  - name: Wall
+    uniqueID: 4100361147
+    locked: 0

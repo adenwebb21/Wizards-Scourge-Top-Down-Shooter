@@ -7,7 +7,7 @@ public class UpgradeController : MonoBehaviour {
     public PlayerHealth playerHealth;
     public GameUI UI;
 
-    private int buttonSelected = 2;
+    private int buttonSelected = 0;
 
     public void RefillHealth()
     {

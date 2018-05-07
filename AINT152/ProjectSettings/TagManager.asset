@@ -15,6 +15,7 @@ TagManager:
   - Bolt
   - BoltImpact
   - Pickup
+  - Music
   layers:
   - Default
   - TransparentFX
@@ -75,4 +76,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 4100361147
+    locked: 0
+  - name: Music
+    uniqueID: 332509231
     locked: 0

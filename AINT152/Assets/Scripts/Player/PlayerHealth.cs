@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     GameObject playerSpawner;
 
     public GameUI ui;
+    public PlayerAudioController playerAudio;
 
     public int health;
     public int maxHealth;
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        playerAudio.PlayerDamageSound(0f);
         health -= damage;
         SendHealthData();
 

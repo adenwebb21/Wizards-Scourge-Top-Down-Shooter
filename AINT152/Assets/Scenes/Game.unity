@@ -1944,6 +1944,7 @@ GameObject:
   m_Component:
   - component: {fileID: 483110794}
   - component: {fileID: 483110795}
+  - component: {fileID: 483110796}
   m_Layer: 0
   m_Name: UI
   m_TagString: Untagged
@@ -1992,6 +1993,17 @@ MonoBehaviour:
   upgradeController: {fileID: 1898543503}
   playerDead: 0
   waveVictory: 0
+--- !u!114 &483110796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 483110793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a78510706dc5fa4a8cb5657697f4756, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &493588318
 GameObject:
   m_ObjectHideFlags: 0
@@ -4002,9 +4014,10 @@ GameObject:
   m_Component:
   - component: {fileID: 576990864}
   - component: {fileID: 576990863}
+  - component: {fileID: 576990865}
   m_Layer: 0
-  m_Name: AudioController
-  m_TagString: Untagged
+  m_Name: MusicController
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4019,8 +4032,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b2c33d341dc3e044a8ab40eae396ff69, type: 3}
-  m_PlayOnAwake: 1
-  m_Volume: 0.25
+  m_PlayOnAwake: 0
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -4102,6 +4115,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &576990865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 576990862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22ab31230f51a6d4f89122c9112d7b12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &615661740
 GameObject:
   m_ObjectHideFlags: 0
@@ -8500,91 +8524,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1.5}
   m_EdgeRadius: 0
---- !u!1 &1148898763 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1856770473232662, guid: 726e25e88fa7da248bdc4a519dae2e62,
-    type: 2}
-  m_PrefabInternal: {fileID: 1777462310}
---- !u!82 &1148898764
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1148898763}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e7fb1acd1a81f0342b05479185b0ab87, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.2
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    - serializedVersion: 2
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 2
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 0
 --- !u!1 &1161387742
 GameObject:
   m_ObjectHideFlags: 0
@@ -11021,6 +10960,26 @@ Tilemap:
     m_DirtyIndex: 0
   - serializedVersion: 1
     m_DirtyIndex: 0
+--- !u!1 &1286227579 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1856770473232662, guid: 726e25e88fa7da248bdc4a519dae2e62,
+    type: 2}
+  m_PrefabInternal: {fileID: 1777462310}
+--- !u!114 &1286227580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1286227579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6d236046857d04fb5902b27b63b2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipTakeDamage: {fileID: 0}
+  clipDeath: {fileID: 0}
+  clipShot: {fileID: 8300000, guid: e7fb1acd1a81f0342b05479185b0ab87, type: 3}
+  clipWalking: {fileID: 0}
 --- !u!1 &1290958194
 GameObject:
   m_ObjectHideFlags: 0
@@ -15956,6 +15915,11 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 483110795}
+    - target: {fileID: 114570691328538528, guid: 726e25e88fa7da248bdc4a519dae2e62,
+        type: 2}
+      propertyPath: playerAudio
+      value: 
+      objectReference: {fileID: 1286227580}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 726e25e88fa7da248bdc4a519dae2e62, type: 2}
   m_IsPrefabParent: 0

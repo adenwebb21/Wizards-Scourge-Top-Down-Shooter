@@ -232,7 +232,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
+  playerAudio: {fileID: 0}
   health: 100
+  maxHealth: 0
 --- !u!212 &212019075611812146
 SpriteRenderer:
   m_ObjectHideFlags: 1

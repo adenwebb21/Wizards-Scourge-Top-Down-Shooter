@@ -5,7 +5,12 @@ using UnityEngine;
 public class TopDownCharacterController2D : MonoBehaviour {
 
     public float speed = 5.0f;
- 
+    private float originalSpeed = 5.0f;
+
+    public float blinkCoolDown = 5f;
+    float timer;
+    private bool isBlinking = false;
+
     Rigidbody2D rigidbody2D;
     Animator anim;
 
@@ -22,7 +27,9 @@ public class TopDownCharacterController2D : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        if(x == 0 && y == 0)
+        timer += Time.deltaTime;
+
+        if (x == 0 && y == 0)
         {
             anim.SetInteger("state", 0);
             childAnim.SetInteger("state", 0);
@@ -34,8 +41,6 @@ public class TopDownCharacterController2D : MonoBehaviour {
         }
 
         rigidbody2D.velocity = new Vector2(x, y) * speed;
-        rigidbody2D.angularVelocity = 0.0f;     
+        rigidbody2D.angularVelocity = 0.0f;   
     }
-
-
 }

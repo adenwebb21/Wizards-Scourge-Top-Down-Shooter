@@ -44,10 +44,7 @@ public class ShootBullet : MonoBehaviour
 
         shotAudio.PlayerShot(initialDelay);
 
-        Invoke("SetFiring", fireTime);    
-
-        
-        
+        Invoke("SetFiring", fireTime);       
     }
 
     void Update()

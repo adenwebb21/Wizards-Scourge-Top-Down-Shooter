@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 114558789990317184}
   - component: {fileID: 114055966184522052}
   - component: {fileID: 114570691328538528}
+  - component: {fileID: 114797365907479170}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -219,6 +220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  blinkCoolDown: 5
   childAnim: {fileID: 95292140278680254}
 --- !u!114 &114570691328538528
 MonoBehaviour:
@@ -232,9 +234,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ui: {fileID: 0}
-  playerAudio: {fileID: 0}
+  playerAudio: {fileID: 114797365907479170}
   health: 100
   maxHealth: 0
+--- !u!114 &114797365907479170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1856770473232662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd6d236046857d04fb5902b27b63b2e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clipTakeDamage: {fileID: 0}
+  clipDeath: {fileID: 0}
+  clipShot: {fileID: 8300000, guid: e7fb1acd1a81f0342b05479185b0ab87, type: 3}
+  clipWalking: {fileID: 0}
 --- !u!212 &212019075611812146
 SpriteRenderer:
   m_ObjectHideFlags: 1

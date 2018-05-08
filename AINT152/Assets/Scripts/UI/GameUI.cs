@@ -2,19 +2,21 @@
 using System.Collections;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class GameUI : MonoBehaviour
 {
     private int health;
     private int score;
 
-    private string gameInfo = "";
-    //private Rect boxRect = new Rect(10, 10, 300, 50);
-
     public Transform pauseMenu;
+    public Transform optionsMenu;
     public Transform deathScreen;
     public Transform waveScreen;
     public Transform inGameStats;
+
+    public AudioMixer mixer;
+
 
     public ManageUpgradeScreen upgradeScreenScript;
 
@@ -67,11 +69,6 @@ public class GameUI : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
         waveText.text = "Wave: " + controller.currentWave.ToString();
     }
-
-    //void OnGUI()
-    //{
-    //    GUI.Box(boxRect, gameInfo);
-    //}
 
     private void Update()
     {
@@ -138,6 +135,28 @@ public class GameUI : MonoBehaviour
             pauseMenu.gameObject.SetActive(false);
             Time.timeScale = 1;
         }
+    }
+
+    public void OptionsMenu()
+    {
+        if (!optionsMenu.gameObject.active)
+        {
+            optionsMenu.gameObject.SetActive(true);
+        }
+        else
+        {
+            optionsMenu.gameObject.SetActive(false);
+        }
+    }
+
+    public void SetMasterVolume(float newValue)
+    {
+        mixer.SetFloat("masterVolume", newValue);
+    }
+
+    public void SetMusicVolume(float newValue)
+    {
+        mixer.SetFloat("musicVolume", newValue);
     }
 
     public void StartGame()

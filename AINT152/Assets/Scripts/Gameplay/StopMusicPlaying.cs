@@ -6,6 +6,6 @@ public class StopMusicPlaying : MonoBehaviour {
 
     void Start()
     {
-        GameObject.FindGameObjectWithTag("Music").GetComponent<KeepMusicThroughScenes>().StopMusic();
+        GameObject.FindGameObjectWithTag("Music").GetComponent<KeepMusicThroughScenes>().StopMusic();       // Dont want music playing on main menu
     }
 }

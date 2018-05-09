@@ -14,11 +14,11 @@ public class LevelSelector : MonoBehaviour {
 
     public void SetLevel()
     {
-        levels = GetComponentsInChildren<Grid>(true);
+        levels = GetComponentsInChildren<Grid>(true);       // Get all levels available ...
 
-        chosenLevel = levels[Random.Range(0, levels.Length)];
+        chosenLevel = levels[Random.Range(0, levels.Length)];       // ... and pick a random one
 
-        foreach(Grid level in levels)
+        foreach(Grid level in levels)       // Enable the correct one and disable all others
         {
             if(level == chosenLevel)
             {
@@ -30,6 +30,6 @@ public class LevelSelector : MonoBehaviour {
             }
         }
 
-        AstarPath.active.Scan();
+        AstarPath.active.Scan();        // Rescan for pathfinding
     }
 }

@@ -9,17 +9,17 @@ public class UpgradeController : MonoBehaviour {
 
     private int buttonSelected = 0;
 
-    public void RefillHealth()
+    public void RefillHealth()      // Will be executed from a button click
     {
         buttonSelected = 1;
     }
 
-    public void IncreaseMaxHealth()
+    public void IncreaseMaxHealth()     
     {
         buttonSelected = 2;
     }
 
-    public void ActivateSelection()
+    public void ActivateSelection()     // Called when the player presses space to confirm selection
     {
         switch(buttonSelected)
         {

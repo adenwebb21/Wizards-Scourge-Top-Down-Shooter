@@ -16,12 +16,12 @@ public class RandomSpawner : MonoBehaviour {
 
     GameObject enemyClone;
 
-    private void Start()
+    private void Start()        // Instantiate all spawners in level
     {
         spawners = GameObject.FindGameObjectsWithTag("SpawningLocation");
     }
 
-    public void StartNewWave()
+    public void StartNewWave()      // Also resets spawners on new wave, resetting enemy number to 0
     {
         enemyCount = 0;
         spawners = GameObject.FindGameObjectsWithTag("SpawningLocation");
@@ -31,7 +31,7 @@ public class RandomSpawner : MonoBehaviour {
     {
         Timer -= Time.deltaTime;
 
-        chosenSpawner = spawners[Random.Range(0, spawners.Length)];
+        chosenSpawner = spawners[Random.Range(0, spawners.Length)];     // Pick one of the spawners in the level
 
         if(enemyCount < numberOfEnemyInWave)
         {

@@ -19,7 +19,7 @@ public class PlayerAudioController : MonoBehaviour
     private AudioSource audioShot;
     private AudioSource audioWalking;
 
-    public AudioSource AddAudio(AudioClip clip, AudioMixerGroup mixer, bool loop, bool playAwake, float vol)
+    public AudioSource AddAudio(AudioClip clip, AudioMixerGroup mixer, bool loop, bool playAwake, float vol)        // Creates the audio sources as necessary
     {
         AudioSource newAudio = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
         newAudio.clip = clip;

@@ -26,7 +26,7 @@ public class ShootBullet : MonoBehaviour
         else if (!Input.GetKey(KeyCode.Mouse0))
         {
             isFiring = false;
-            playerAnim.SetTrigger("attack_end");
+            playerAnim.SetTrigger("attack_end");        // The attack only ends when the player releases the fire button
         }
 
     }

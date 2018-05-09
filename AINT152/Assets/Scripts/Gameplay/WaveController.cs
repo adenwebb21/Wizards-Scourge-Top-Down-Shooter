@@ -15,11 +15,6 @@ public class WaveController : MonoBehaviour {
 
     private GameObject player;
 
-    private void Start()
-    {
-
-    }
-
     private void Update()
     {
         if(enemiesRemaining == 0 && currentWave!= 0)

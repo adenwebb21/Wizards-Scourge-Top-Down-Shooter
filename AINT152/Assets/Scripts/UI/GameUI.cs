@@ -9,6 +9,7 @@ public class GameUI : MonoBehaviour
     private int health;
     private int score;
 
+    // All of the UI elements
     public Transform pauseMenu;
     public Transform optionsMenu;
     public Transform deathScreen;
@@ -19,6 +20,7 @@ public class GameUI : MonoBehaviour
 
     public ManageUpgradeScreen upgradeScreenScript;
 
+    // Text
     public Text healthText;
     public Text scoreText;
     public Text waveText;
@@ -62,7 +64,7 @@ public class GameUI : MonoBehaviour
         UpdateUI();
     }
 
-    public void UpdateUI()
+    public void UpdateUI()      // Manages what text is on the screen
     {
         healthText.text = "Health: " + health.ToString();
         scoreText.text = "Score: " + score.ToString();
@@ -71,7 +73,7 @@ public class GameUI : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape))
+        if(Input.GetKeyDown(KeyCode.Escape))        // Pause menu
         {
             Pause();
         }
@@ -83,12 +85,12 @@ public class GameUI : MonoBehaviour
             deathScreen.gameObject.GetComponentsInChildren<Text>()[1].text = "Score: " + score.ToString();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space) && playerDead)
+        if (Input.GetKeyDown(KeyCode.Space) && playerDead)      // If the player has died and space is pressed, reset the game
         {
             playerDead = false;
             Time.timeScale = 1f;
             deathScreen.gameObject.SetActive(false);
-            SceneManager.LoadScene("Game");
+            SceneManager.LoadScene("Game");     // Reset the scene
         }
 
         if(waveVictory)
@@ -96,9 +98,9 @@ public class GameUI : MonoBehaviour
             pressSpaceText.text = "Press space to begin next wave";
             waveScreen.gameObject.SetActive(true);
 
-            if((controller.currentWave - 1) % 5 == 0)
+            if((controller.currentWave - 1) % 5 == 0)       // Every 5 waves ... 
             {
-                upgradeScreenScript.EnableUpgradeScreen();
+                upgradeScreenScript.EnableUpgradeScreen();      // ... show the upgrade screen too
                 pressSpaceText.text = "Press space to confirm your choice";
             }
             else
@@ -109,7 +111,7 @@ public class GameUI : MonoBehaviour
             Time.timeScale = 0.2f;
         }
 
-        if(waveVictory && Input.GetKeyDown(KeyCode.Space))
+        if(waveVictory && Input.GetKeyDown(KeyCode.Space))      // After having won a wave, checks for a confirmation from player to start next
         {
             UpdateUI();
             upgradeController.ActivateSelection();
@@ -148,6 +150,7 @@ public class GameUI : MonoBehaviour
         }
     }
 
+    // The following few functions are purely related to volume control
     public void SetMasterVolume(float newValue)
     {
         mixer.SetFloat("masterVolume", newValue);
@@ -161,11 +164,6 @@ public class GameUI : MonoBehaviour
     public void SetSoundVolume(float newValue)
     {
         mixer.SetFloat("soundVolume", newValue);
-    }
-
-    public void PlaySoundtest()
-    {
-        
     }
 
     public void StartGame()

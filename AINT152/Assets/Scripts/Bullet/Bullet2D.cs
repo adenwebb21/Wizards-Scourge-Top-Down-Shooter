@@ -21,7 +21,7 @@ public class Bullet2D : MonoBehaviour
         CancelInvoke("Die");
     }
 
-    void FixedUpdate()
+    void FixedUpdate()      // Move the bullet forward
     {
         GetComponent<Rigidbody2D>().velocity = transform.up * speed;
     }

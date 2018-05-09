@@ -35,15 +35,15 @@ public class EnemyHealth : MonoBehaviour
         }       
     }
 
-    void DropStuff()
+    void DropStuff()        // Drop health based on probabilities
     {
-        if(Random.Range(0, 100) <= 50)
+        if(Random.Range(0, 100) <= 50)      // 50% chance to spawn anything
         {
-            if(Random.Range(0, 100) <= 80)
+            if(Random.Range(0, 100) <= 80)      // If anything is spawned, 80% chance that it's just one
             {
                 Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));               
             }
-            else if(Random.Range(0, 100) <= 95)
+            else if(Random.Range(0, 100) <= 95)     // Between 80 and 95 anywehre from 1 to 3 can be spawned
             {
                 for (int i = 0; i < Random.Range(1, 3); i++)
                 {
@@ -52,7 +52,7 @@ public class EnemyHealth : MonoBehaviour
             }
             else
             {
-                for (int i = 0; i < Random.Range(1, 4); i++)
+                for (int i = 0; i < Random.Range(1, 4); i++)        // From 95 to 100 is 1 to 4 health drops
                 {
                     Instantiate(healthDrop, transform.position, Quaternion.Euler(0.0f, 0.0f, Random.Range(0.0f, 360.0f)));
                 }

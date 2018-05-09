@@ -20,7 +20,6 @@ public class PlayerInRange : MonoBehaviour {
         }
     }
 
-
     void OnTriggerExit(Collider other)
     {
         if (other == enemyDetection)

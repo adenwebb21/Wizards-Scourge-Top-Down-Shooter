@@ -8,7 +8,7 @@ public class KeepMusicThroughScenes : MonoBehaviour {
 
     private void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+        DontDestroyOnLoad(transform.gameObject);        // Retain the music player
         audioMusic = GetComponent<AudioSource>();
     }
 

@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthPotion(int healthRegained)
     {
-        if (health >= maxHealth - 10 && health != maxHealth)
+        if (health >= maxHealth - 10 && health != maxHealth)        // Ensures that the health doesn't go over max 
         {
             health = maxHealth;
         }
@@ -49,13 +49,13 @@ public class PlayerHealth : MonoBehaviour
         SendHealthData();
     }
 
-    public void RefillHealth()
+    public void RefillHealth()      // From upgrades
     {
         health = maxHealth;
         SendHealthData();
     }
 
-    public void IncreaseMaxHealth()
+    public void IncreaseMaxHealth()     // Accessed from upgrades
     {
         maxHealth += 50;
         SendHealthData();
@@ -85,10 +85,4 @@ public class PlayerHealth : MonoBehaviour
             this.transform.position = playerSpawner.transform.position;
         }
     }
-
-    public void ResetPlayer()
-    {
-
-    }
-
 }

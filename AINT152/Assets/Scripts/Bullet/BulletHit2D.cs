@@ -27,7 +27,6 @@ public class BulletHit2D : MonoBehaviour
             CreateEffect();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
             gameObject.GetComponent<CircleCollider2D>().enabled = false;
-            //Destroy(gameObject);
         }  
     }
 

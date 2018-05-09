@@ -17,7 +17,6 @@ public class GameUI : MonoBehaviour
 
     public AudioMixer mixer;
 
-
     public ManageUpgradeScreen upgradeScreenScript;
 
     public Text healthText;
@@ -157,6 +156,16 @@ public class GameUI : MonoBehaviour
     public void SetMusicVolume(float newValue)
     {
         mixer.SetFloat("musicVolume", newValue);
+    }
+
+    public void SetSoundVolume(float newValue)
+    {
+        mixer.SetFloat("soundVolume", newValue);
+    }
+
+    public void PlaySoundtest()
+    {
+        
     }
 
     public void StartGame()

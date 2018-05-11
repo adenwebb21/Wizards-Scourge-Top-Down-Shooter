@@ -203,7 +203,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.3515625
+  orthographic size: 4.8125
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1759,7 +1759,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 355739028}
 --- !u!114 &355739028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2369,7 +2368,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 493588321}
 --- !u!114 &493588321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2510,7 +2508,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 496017117}
 --- !u!114 &496017117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4811,7 +4808,7 @@ GameObject:
   - component: {fileID: 692972116}
   m_Layer: 0
   m_Name: WaveController
-  m_TagString: MainCamera
+  m_TagString: WaveController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10356,7 +10353,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 1171120225}
 --- !u!1 &1185934290
 GameObject:
   m_ObjectHideFlags: 0
@@ -11950,7 +11946,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 1290958197}
 --- !u!114 &1290958197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15577,7 +15572,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90986fbce18ea904d902efcee67b3732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathtext: {fileID: 1624862438}
 --- !u!114 &1624862438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17590,11 +17584,16 @@ Prefab:
       propertyPath: ui
       value: 
       objectReference: {fileID: 483110795}
-    - target: {fileID: 114797365907479170, guid: 726e25e88fa7da248bdc4a519dae2e62,
+    - target: {fileID: 114570691328538528, guid: 726e25e88fa7da248bdc4a519dae2e62,
         type: 2}
-      propertyPath: mixer
+      propertyPath: health
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 114570691328538528, guid: 726e25e88fa7da248bdc4a519dae2e62,
+        type: 2}
+      propertyPath: deathSound
       value: 
-      objectReference: {fileID: 243504919482690214, guid: e812aed965e4516469f3b92be3758f1c,
+      objectReference: {fileID: 1909760405509984, guid: 0bb569034ec60984eb42d0821ee14f1d,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 726e25e88fa7da248bdc4a519dae2e62, type: 2}

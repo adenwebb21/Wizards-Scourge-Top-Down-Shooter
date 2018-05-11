@@ -248,10 +248,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd6d236046857d04fb5902b27b63b2e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  clipTakeDamage: {fileID: 0}
-  clipDeath: {fileID: 0}
+  clipTakeDamage: {fileID: 8300000, guid: 6506497952bc0094aa86e1cd0c151a33, type: 3}
+  clipDeath: {fileID: 8300000, guid: d11457f7bbfe14443bde48bc67346432, type: 3}
   clipShot: {fileID: 8300000, guid: e7fb1acd1a81f0342b05479185b0ab87, type: 3}
   clipWalking: {fileID: 0}
+  mixer: {fileID: 243504919482690214, guid: e812aed965e4516469f3b92be3758f1c, type: 2}
 --- !u!212 &212019075611812146
 SpriteRenderer:
   m_ObjectHideFlags: 1

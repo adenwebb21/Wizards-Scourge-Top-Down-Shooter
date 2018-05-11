@@ -19,7 +19,7 @@ public class PlayerAudioController : MonoBehaviour
     private AudioSource audioShot;
     private AudioSource audioWalking;
 
-    public AudioSource AddAudio(AudioClip clip, AudioMixerGroup mixer, bool loop, bool playAwake, float vol)        // Creates the audio sources as necessary
+    public AudioSource AddAudio(AudioClip clip, AudioMixerGroup mixer, bool loop, bool playAwake, float vol, int priority)        // Creates the audio sources as necessary
     {
         AudioSource newAudio = gameObject.AddComponent(typeof(AudioSource)) as AudioSource;
         newAudio.clip = clip;
@@ -27,15 +27,16 @@ public class PlayerAudioController : MonoBehaviour
         newAudio.loop = loop;
         newAudio.playOnAwake = playAwake;
         newAudio.volume = vol;
+        newAudio.priority = priority;
         return newAudio;
     }
 
     public void Awake()
     {
-        audioShot = AddAudio(clipShot, mixer, false, false, 0.1f);
-        //audioDeath = AddAudio(clipDeath, mixer, false, false, 0.4f);
+        audioShot = AddAudio(clipShot, mixer, false, false, 0.2f, 1);
+        audioDeath = AddAudio(clipDeath, mixer, false, false, 0.4f, 5);
         //audioWalking = AddAudio(clipWalking, mixer, true, false, 0.4f);
-        audioTakeDamage = AddAudio(clipTakeDamage, mixer, false, false, 0.5f);
+        audioTakeDamage = AddAudio(clipTakeDamage, mixer, false, false, 0.5f, 2);
     }
 
     public void PlayerDamageSound(float delay)
@@ -47,5 +48,11 @@ public class PlayerAudioController : MonoBehaviour
     {
         audioShot.pitch = Random.Range(0.75f, 1.5f);
         audioShot.PlayDelayed(delay);
+    }
+
+    public void PlayerDeathSound(float delay)
+    {
+        
+        audioDeath.PlayDelayed(delay);
     }
 }

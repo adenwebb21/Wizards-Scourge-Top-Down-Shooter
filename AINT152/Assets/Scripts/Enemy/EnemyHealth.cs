@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
-    private GameObject camera;
+
     private WaveController controller;
     public GameObject emitter;
 
@@ -15,9 +15,7 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
-        camera = GameObject.FindGameObjectWithTag("MainCamera");
-
-        controller = camera.GetComponent(typeof(WaveController)) as WaveController;
+        controller = GameObject.FindGameObjectWithTag("WaveController").GetComponent(typeof(WaveController)) as WaveController;
     }
 
     public void TakeDamage(int damage)

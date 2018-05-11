@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
 
     GameObject playerSpawner;
 
+    public GameObject deathSound;
+
     public GameUI ui;
     public PlayerAudioController playerAudio;
 
@@ -31,6 +33,9 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            //playerAudio.PlayerDeathSound(0f);
+            Instantiate(deathSound);
+
             Die();
         }
     }

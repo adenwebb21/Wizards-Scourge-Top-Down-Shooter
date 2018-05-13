@@ -11,6 +11,8 @@ public class WaveController : MonoBehaviour {
     public RandomSpawner randomSpawner;
     public GameUI uiManager;
 
+    public GameObject waveVictorySound;
+
     private GameObject playerSpawner;
 
     private GameObject player;
@@ -20,6 +22,7 @@ public class WaveController : MonoBehaviour {
         if(enemiesRemaining == 0 && currentWave!= 0)
         {
             uiManager.waveVictory = true;
+            Instantiate(waveVictorySound);
 
             currentWave++;
             enemiesRemaining = currentWave + Random.Range(1, 5);

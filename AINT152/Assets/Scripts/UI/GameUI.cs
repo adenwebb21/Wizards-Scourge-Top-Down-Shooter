@@ -18,6 +18,8 @@ public class GameUI : MonoBehaviour
 
     public AudioMixer mixer;
 
+    public AudioSource menuSound;
+
     public ManageUpgradeScreen upgradeScreenScript;
 
     // Text
@@ -75,6 +77,7 @@ public class GameUI : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Escape))        // Pause menu
         {
+            menuSound.Play();
             Pause();
         }
 
@@ -87,6 +90,7 @@ public class GameUI : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && playerDead)      // If the player has died and space is pressed, reset the game
         {
+            menuSound.Play();
             playerDead = false;
             Time.timeScale = 1f;
             deathScreen.gameObject.SetActive(false);
@@ -113,6 +117,7 @@ public class GameUI : MonoBehaviour
 
         if(waveVictory && Input.GetKeyDown(KeyCode.Space))      // After having won a wave, checks for a confirmation from player to start next
         {
+            menuSound.Play();
             UpdateUI();
             upgradeController.ActivateSelection();
 

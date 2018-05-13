@@ -49,10 +49,4 @@ public class PlayerAudioController : MonoBehaviour
         audioShot.pitch = Random.Range(0.75f, 1.5f);
         audioShot.PlayDelayed(delay);
     }
-
-    public void PlayerDeathSound(float delay)
-    {
-        
-        audioDeath.PlayDelayed(delay);
-    }
 }

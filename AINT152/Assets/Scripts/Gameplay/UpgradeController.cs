@@ -11,11 +11,13 @@ public class UpgradeController : MonoBehaviour {
 
     public void RefillHealth()      // Will be executed from a button click
     {
+        UI.menuSound.Play();
         buttonSelected = 1;
     }
 
     public void IncreaseMaxHealth()     
     {
+        UI.menuSound.Play();
         buttonSelected = 2;
     }
 

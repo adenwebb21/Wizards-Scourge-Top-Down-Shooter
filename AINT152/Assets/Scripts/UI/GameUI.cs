@@ -26,6 +26,7 @@ public class GameUI : MonoBehaviour
     public Text healthText;
     public Text scoreText;
     public Text waveText;
+    public Text highScoreText;
 
     public Text pressSpaceText;
 
@@ -71,6 +72,11 @@ public class GameUI : MonoBehaviour
         healthText.text = "Health: " + health.ToString();
         scoreText.text = "Score: " + score.ToString();
         waveText.text = "Wave: " + controller.currentWave.ToString();
+
+        if(score > PlayerPrefs.GetFloat("highScore"))
+        {
+            PlayerPrefs.SetFloat("highScore", score);
+        }
     }
 
     private void Update()
@@ -85,7 +91,9 @@ public class GameUI : MonoBehaviour
         {
             Time.timeScale = 0.2f;
             deathScreen.gameObject.SetActive(true);
-            deathScreen.gameObject.GetComponentsInChildren<Text>()[1].text = "Score: " + score.ToString();
+            deathScreen.gameObject.GetComponentsInChildren<Text>()[1].text = "Score:   " + score.ToString();
+            deathScreen.gameObject.GetComponentsInChildren<Text>()[2].text = "High Score:   " + PlayerPrefs.GetFloat("highScore");
+                      
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && playerDead)      // If the player has died and space is pressed, reset the game
@@ -159,16 +167,22 @@ public class GameUI : MonoBehaviour
     public void SetMasterVolume(float newValue)
     {
         mixer.SetFloat("masterVolume", newValue);
+
+        PlayerPrefs.SetFloat("masterVolume", newValue);
     }
 
     public void SetMusicVolume(float newValue)
     {
         mixer.SetFloat("musicVolume", newValue);
+
+        PlayerPrefs.SetFloat("musicVolume", newValue);
     }
 
     public void SetSoundVolume(float newValue)
     {
         mixer.SetFloat("soundVolume", newValue);
+
+        PlayerPrefs.SetFloat("soundVolume", newValue);
     }
 
     public void StartGame()

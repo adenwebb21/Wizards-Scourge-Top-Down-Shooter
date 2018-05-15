@@ -22,7 +22,7 @@ public class BulletHit2D : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit") && !other.CompareTag("Pickup") && !other.CompareTag("Untagged"))
+        if (!other.CompareTag("EnemyRadius") && !other.CompareTag("Pit") && !other.CompareTag("Pickup") && !other.CompareTag("Untagged") && !other.CompareTag("Bolt") && !other.CompareTag("Player"))
         {
             CreateEffect();
             gameObject.GetComponent<SpriteRenderer>().enabled = false;

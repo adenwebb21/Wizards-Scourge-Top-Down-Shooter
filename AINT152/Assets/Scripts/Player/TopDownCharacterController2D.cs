@@ -7,9 +7,6 @@ public class TopDownCharacterController2D : MonoBehaviour {
     public float speed = 5.0f;
     private float originalSpeed = 5.0f;
 
-    public float blinkCoolDown = 5f;
-    float timer;
-    private bool isBlinking = false;
 
     Rigidbody2D rigidbody2D;
     Animator anim;
@@ -26,8 +23,6 @@ public class TopDownCharacterController2D : MonoBehaviour {
     {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
-
-        timer += Time.deltaTime;
 
         if (x == 0 && y == 0)
         {

@@ -20,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        if (health < 1) return;
+
         health -= damage;
         onTakeDamage.Invoke();
 

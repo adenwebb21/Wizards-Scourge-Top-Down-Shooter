@@ -15,6 +15,7 @@ public class BulletHit2D : MonoBehaviour
         if (other.CompareTag(damageTag))
         {
             other.SendMessage("TakeDamage", damage);
+            other.SendMessage("SlowDown", 4);
         }
 
         if (other.CompareTag(damageTag))

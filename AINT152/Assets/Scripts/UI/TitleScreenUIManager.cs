@@ -9,6 +9,7 @@ public class TitleScreenUIManager : MonoBehaviour {
     public AudioSource hoverSound;
 
     public Transform helpScreen;
+    public Transform creditScreen;
 
     public void StartGame()
     {
@@ -32,6 +33,20 @@ public class TitleScreenUIManager : MonoBehaviour {
         else
         {
             helpScreen.gameObject.SetActive(false);
+        }
+    }
+
+    public void ToggleCreditsScreen()
+    {
+        menuSound.Play();
+
+        if (!creditScreen.gameObject.active)
+        {
+            creditScreen.gameObject.SetActive(true);
+        }
+        else
+        {
+            creditScreen.gameObject.SetActive(false);
         }
     }
 

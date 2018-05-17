@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 20
+  movementparent: {fileID: 114541978745042934}
   emitter: {fileID: 1147251794402574, guid: a7a43c7c8ec9b824fb708ea043da21f7, type: 2}
   healthDrop: {fileID: 1836696555515246, guid: b7632d4559a40b440a0991e65be8f770, type: 2}
   onTakeDamage:

@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.Events;
+using Pathfinding;
 
 public class EnemyHealth : MonoBehaviour
 {
     public int health = 100;
+
+    public AIPath movementparent;
 
     private WaveController controller;
     public GameObject emitter;
@@ -12,6 +15,8 @@ public class EnemyHealth : MonoBehaviour
     public GameObject healthDrop;
 
     public UnityEvent onTakeDamage;
+
+    private float currentEnemyMaxSpeed;
 
     private void Start()
     {
@@ -35,9 +40,23 @@ public class EnemyHealth : MonoBehaviour
         }       
     }
 
+    public void SlowDown(float strength)
+    {
+        currentEnemyMaxSpeed = movementparent.maxSpeed;
+
+        movementparent.maxSpeed = currentEnemyMaxSpeed / strength;
+
+        Invoke("SpeedUp", 0.2f);
+    }
+
+    public void SpeedUp()
+    {
+        movementparent.maxSpeed = currentEnemyMaxSpeed;
+    }
+
     void DropStuff()        // Drop health based on probabilities
     {
-        if(Random.Range(0, 100) <= 50)      // 50% chance to spawn anything
+        if(Random.Range(0, 100) <= 30)      // 50% chance to spawn anything
         {
             if(Random.Range(0, 100) <= 80)      // If anything is spawned, 80% chance that it's just one
             {

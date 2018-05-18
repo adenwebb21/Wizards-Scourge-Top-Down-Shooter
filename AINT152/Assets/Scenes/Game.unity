@@ -203,7 +203,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.8125
+  orthographic size: 3.9921875
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -4700,7 +4700,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Max Health Increase
+  m_Text: + 25 Max Health
 --- !u!222 &646951741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14152,7 +14152,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Health Refill
+  m_Text: + 50 Health
 --- !u!222 &1337518039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15497,7 +15497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1576042120
 RectTransform:
   m_ObjectHideFlags: 0

@@ -56,13 +56,21 @@ public class PlayerHealth : MonoBehaviour
 
     public void RefillHealth()      // From upgrades
     {
-        health = maxHealth;
+        if (health >= maxHealth - 50 && health != maxHealth)        // Ensures that the health doesn't go over max 
+        {
+            health = maxHealth;
+        }
+        else
+        {
+            health += 50;
+        }
+
         SendHealthData();
     }
 
     public void IncreaseMaxHealth()     // Accessed from upgrades
     {
-        maxHealth += 50;
+        maxHealth += 25;
         SendHealthData();
     }
 

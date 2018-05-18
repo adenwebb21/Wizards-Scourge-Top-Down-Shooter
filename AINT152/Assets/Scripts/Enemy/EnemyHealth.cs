@@ -20,6 +20,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void Start()
     {
+        currentEnemyMaxSpeed = movementparent.maxSpeed;
+
         controller = GameObject.FindGameObjectWithTag("WaveController").GetComponent(typeof(WaveController)) as WaveController;
     }
 
@@ -42,11 +44,12 @@ public class EnemyHealth : MonoBehaviour
 
     public void SlowDown(float strength)
     {
-        currentEnemyMaxSpeed = movementparent.maxSpeed;
+        if(movementparent.maxSpeed == currentEnemyMaxSpeed)
+        {
+            movementparent.maxSpeed = currentEnemyMaxSpeed / strength;
 
-        movementparent.maxSpeed = currentEnemyMaxSpeed / strength;
-
-        Invoke("SpeedUp", 0.2f);
+            Invoke("SpeedUp", 0.2f);
+        }       
     }
 
     public void SpeedUp()

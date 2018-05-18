@@ -5,6 +5,7 @@ using UnityEngine;
 public class UpgradeController : MonoBehaviour {
 
     public PlayerHealth playerHealth;
+    public coolDownManager charges;
     public GameUI UI;
 
     private int buttonSelected = 0;
@@ -21,6 +22,18 @@ public class UpgradeController : MonoBehaviour {
         buttonSelected = 2;
     }
 
+    public void IncreaseShotgunCharges()
+    {
+        UI.menuSound.Play();
+        buttonSelected = 3;
+    }
+
+    public void ActivateRegenerativeHealth()
+    {
+        UI.menuSound.Play();
+        buttonSelected = 4;
+    }
+
     public void ActivateSelection()     // Called when the player presses space to confirm selection
     {
         switch(buttonSelected)
@@ -30,6 +43,14 @@ public class UpgradeController : MonoBehaviour {
                 break;
             case 2:
                 playerHealth.IncreaseMaxHealth();
+                break;
+            case 3:
+                charges.maxNumberOfCharges++;
+                charges.chargeOne.gameObject.SetActive(true);
+                charges.chargeTwo.gameObject.SetActive(true);
+                break;
+            case 4:
+                playerHealth.isRegenerating = true;
                 break;
             default:
                 break;

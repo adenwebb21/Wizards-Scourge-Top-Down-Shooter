@@ -12,6 +12,8 @@ public class ShootBullet : MonoBehaviour
     public Animator playerAnim;
     public Transform bulletSpawn;
 
+    public coolDownManager coolDownCont;
+
     private Transform[] fanShotSpawners;
 
     public float fireTime = 0.5f;
@@ -94,12 +96,20 @@ public class ShootBullet : MonoBehaviour
             }
         }
 
-        if(Input.GetMouseButtonDown(1) && timer <= 0)
+        if(Input.GetMouseButtonDown(1) && timer <= 0 && coolDownCont.currentNumberOfCharges == 1)
         {
             coolDownInitiate.Invoke();
             timer = fanShotCoolDown;
 
             FireFanShot();
+            coolDownCont.currentNumberOfCharges--;
+            coolDownCont.UpdateCharges();
+        }
+        else if(Input.GetMouseButtonDown(1) && timer <= 0 && coolDownCont.currentNumberOfCharges > 1)
+        {
+            FireFanShot();
+            coolDownCont.currentNumberOfCharges--;
+            coolDownCont.UpdateCharges();
         }
     }
 }

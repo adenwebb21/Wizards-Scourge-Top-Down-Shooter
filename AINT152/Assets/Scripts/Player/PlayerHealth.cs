@@ -17,11 +17,29 @@ public class PlayerHealth : MonoBehaviour
     public int health;
     public int maxHealth;
 
+    public bool isRegenerating = false;
+    private float timeBetweenHealthUpRegen = 5f;
+    private float timer;
+
     void Start()
     {
         SendHealthData();
         maxHealth = 100;
         health = 100;
+    }
+
+    private void Update()
+    {
+        if (timer >= 0)
+        {
+            timer -= Time.deltaTime;
+        }
+
+        if (isRegenerating && timer <= 0)
+        {
+            timer = timeBetweenHealthUpRegen;
+            HealthPotion(1);
+        }
     }
 
     public void TakeDamage(int damage)
@@ -42,7 +60,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void HealthPotion(int healthRegained)
     {
-        if (health >= maxHealth - 10 && health != maxHealth)        // Ensures that the health doesn't go over max 
+        if (health >= maxHealth - healthRegained && health != maxHealth)        // Ensures that the health doesn't go over max 
         {
             health = maxHealth;
         }

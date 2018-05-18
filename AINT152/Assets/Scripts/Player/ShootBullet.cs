@@ -1,9 +1,14 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 using System.Collections;
 
 public class ShootBullet : MonoBehaviour
 {
+    public UnityEvent coolDownInitiate;
+
     public GameObject bulletPrefab;
+    public GameObject shotgunBulletPrefab;
+
     public Animator playerAnim;
     public Transform bulletSpawn;
 
@@ -48,7 +53,7 @@ public class ShootBullet : MonoBehaviour
     {
         for(int i = 1; i < fanShotSpawners.Length; i++)
         {
-            Instantiate(bulletPrefab, fanShotSpawners[i].position, fanShotSpawners[i].rotation);
+            Instantiate(shotgunBulletPrefab, fanShotSpawners[i].position, fanShotSpawners[i].rotation);
         }      
     }
 
@@ -66,6 +71,11 @@ public class ShootBullet : MonoBehaviour
     void FireFanShot()
     {
         CreateFanBolts();
+    }
+
+    public void ResetCoolDown()
+    {
+        timer = 0;
     }
 
     void Update()
@@ -86,6 +96,7 @@ public class ShootBullet : MonoBehaviour
 
         if(Input.GetMouseButtonDown(1) && timer <= 0)
         {
+            coolDownInitiate.Invoke();
             timer = fanShotCoolDown;
 
             FireFanShot();

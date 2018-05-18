@@ -18,6 +18,8 @@ public class EnemyHealth : MonoBehaviour
 
     private float currentEnemyMaxSpeed;
 
+    float stunStrength, stunDuration;
+
     private void Start()
     {
         currentEnemyMaxSpeed = movementparent.maxSpeed;
@@ -42,14 +44,24 @@ public class EnemyHealth : MonoBehaviour
         }       
     }
 
-    public void SlowDown(float strength)
+    public void SlowDown()
     {
         if(movementparent.maxSpeed == currentEnemyMaxSpeed)
         {
-            movementparent.maxSpeed = currentEnemyMaxSpeed / strength;
+            movementparent.maxSpeed = currentEnemyMaxSpeed / stunStrength;
 
-            Invoke("SpeedUp", 0.2f);
+            Invoke("SpeedUp", stunDuration);
         }       
+    }
+
+    public void GetStunDuration(float duration)
+    {
+        stunDuration = duration;
+    }
+
+    public void GetStunStrength(float strength)
+    {
+        stunStrength = strength;
     }
 
     public void SpeedUp()

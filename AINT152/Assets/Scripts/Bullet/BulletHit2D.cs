@@ -15,7 +15,19 @@ public class BulletHit2D : MonoBehaviour
         if (other.CompareTag(damageTag))
         {
             other.SendMessage("TakeDamage", damage);
-            other.SendMessage("SlowDown", 4);
+
+            if(this.gameObject.name == "Bolt(Clone)")
+            {
+                other.SendMessage("GetStunDuration", 0.2f);
+                other.SendMessage("GetStunStrength", 4);
+            }
+            else if(this.gameObject.name == "ShotgunBolt(Clone)")
+            {
+                other.SendMessage("GetStunDuration", 0.4f);
+                other.SendMessage("GetStunStrength", 4);
+            }
+
+            other.SendMessage("SlowDown");           
         }
 
         if (other.CompareTag(damageTag))

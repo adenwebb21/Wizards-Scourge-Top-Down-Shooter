@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class WaveController : MonoBehaviour {
 
     public int currentWave = 1;
     public int enemiesRemaining;
+
+    public UnityEvent ResetCoolDowns;
 
     public LevelSelector levelSelector;
     public RandomSpawner randomSpawner;
@@ -56,6 +59,8 @@ public class WaveController : MonoBehaviour {
         {
             Destroy(obj);
         }
+
+        ResetCoolDowns.Invoke();
 
         levelSelector.SetLevel();
 

@@ -6,7 +6,7 @@ public class PlaySoundTest : MonoBehaviour {
 
     private AudioSource audio;
 
-    // The script is purely for testing sound volume
+    // The script is purely for the sound effects slider sound volume
 
     private void Start()
     {

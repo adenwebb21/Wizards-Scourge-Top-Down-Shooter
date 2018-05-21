@@ -14,7 +14,7 @@ public class PickRandomOptionalUpgrade : MonoBehaviour
     {
         upgrades = GetComponentsInChildren<Button>(true);
 
-        switch (wvCont.currentWave - 1)
+        switch (wvCont.currentWave - 1)     // The upgrade which will be available on each upgrade screen is predetermined here
         {
             case 5:
                 chosenButton = upgrades[0];
@@ -22,7 +22,7 @@ public class PickRandomOptionalUpgrade : MonoBehaviour
             case 10:
                 chosenButton = upgrades[1];
                 break;
-            default:
+            default:        // Currently only two upgrades - getting to wave 15 is very tricky though!!
                 chosenButton = null;
                 break;
         }

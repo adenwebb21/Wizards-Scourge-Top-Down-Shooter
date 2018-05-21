@@ -5,10 +5,10 @@ using UnityEngine.UI;
 
 public class coolDownManager : MonoBehaviour
 {
-    public Sprite greyedOut;
+    public Sprite greyedOut;        // Different options for the cooldown sprite itself
     public Sprite coloured;
 
-    public Sprite spentCharge;
+    public Sprite spentCharge;      // And for the charges in the event that this upgrade is gained
     public Sprite usableCharge;
 
     public Image imageComp;
@@ -30,13 +30,13 @@ public class coolDownManager : MonoBehaviour
 
     public void StartCoolDown()
     {
-        imageComp.sprite = greyedOut;
-        countDownText.gameObject.SetActive(true);
+        imageComp.sprite = greyedOut;       // Icon is greyed while ability inacessable 
+        countDownText.gameObject.SetActive(true);       // And the text countdown starts
     }
 
     public void ResetCoolDown()
     {
-        if(currentNumberOfCharges < maxNumberOfCharges)
+        if(currentNumberOfCharges < maxNumberOfCharges)     
         {
             currentNumberOfCharges = maxNumberOfCharges;
             UpdateCharges();
@@ -48,7 +48,7 @@ public class coolDownManager : MonoBehaviour
 
     public void UpdateCharges()
     {
-        switch(currentNumberOfCharges)
+        switch(currentNumberOfCharges)      // Based on the current number of charges, a specific combination of charges is presented
         {
             case 0:
                 chargeOne.sprite = spentCharge;

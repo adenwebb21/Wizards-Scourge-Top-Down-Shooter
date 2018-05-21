@@ -73,7 +73,7 @@ public class GameUI : MonoBehaviour
         scoreText.text = "Score: " + score.ToString();
         waveText.text = "Wave: " + controller.currentWave.ToString();
 
-        if(score > PlayerPrefs.GetFloat("highScore"))
+        if(score > PlayerPrefs.GetFloat("highScore"))       // If the player hits a new high score it is saved ready to be used on the death screen
         {
             PlayerPrefs.SetFloat("highScore", score);
         }
@@ -87,7 +87,7 @@ public class GameUI : MonoBehaviour
             Pause();
         }
 
-        if(playerDead)
+        if(playerDead)      // Death screen
         {
             Time.timeScale = 0.2f;
             deathScreen.gameObject.SetActive(true);
@@ -139,7 +139,7 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void Pause()
+    public void Pause()     // Toggle pause menu
     {
         if (!pauseMenu.gameObject.active)
         {
@@ -153,7 +153,7 @@ public class GameUI : MonoBehaviour
         }
     }
 
-    public void OptionsMenu()
+    public void OptionsMenu()       // Toggle options menu
     {
         if (!optionsMenu.gameObject.active)
         {

@@ -9,7 +9,7 @@ public class RetainVolumeAccrossSceneChange : MonoBehaviour
     public Slider music;
     public Slider sound;
 
-    private void Start()
+    private void Start()        // Using playerprefs so that the volums selected by the user are retained
     {
         master.value = PlayerPrefs.GetFloat("masterVolume");
         music.value = PlayerPrefs.GetFloat("musicVolume");

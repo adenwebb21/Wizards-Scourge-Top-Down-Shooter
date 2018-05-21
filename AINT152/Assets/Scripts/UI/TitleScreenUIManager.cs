@@ -22,7 +22,7 @@ public class TitleScreenUIManager : MonoBehaviour {
         Application.Quit();
     }
 
-    public void ToggleHelpScreen()
+    public void ToggleHelpScreen()      // Toggle the help and controls screen
     {
         menuSound.Play();
 
@@ -36,7 +36,7 @@ public class TitleScreenUIManager : MonoBehaviour {
         }
     }
 
-    public void ToggleCreditsScreen()
+    public void ToggleCreditsScreen()       // Toggle credits
     {
         menuSound.Play();
 

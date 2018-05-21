@@ -8,7 +8,7 @@ public class MouseHoverSound : MonoBehaviour, IPointerEnterHandler
 {
     public UnityEvent onHover;
 
-    public void OnPointerEnter(PointerEventData pointerEventData)
+    public void OnPointerEnter(PointerEventData pointerEventData)       // Specialised script for mouse hover
     {
         onHover.Invoke();
     }

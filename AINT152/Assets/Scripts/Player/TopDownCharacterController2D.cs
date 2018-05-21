@@ -24,7 +24,7 @@ public class TopDownCharacterController2D : MonoBehaviour {
         float x = Input.GetAxis("Horizontal");
         float y = Input.GetAxis("Vertical");
 
-        if (x == 0 && y == 0)
+        if (x == 0 && y == 0)       // If the character has moved at all, deal with the animation
         {
             anim.SetInteger("state", 0);
             childAnim.SetInteger("state", 0);

@@ -27,7 +27,7 @@ public class CountDownText : MonoBehaviour {
             text.ResetCoolDown();
         }
 
-        gameObject.GetComponent<Text>().text = timer.ToString("#.#");
+        gameObject.GetComponent<Text>().text = timer.ToString("#.#");       // Display the cooldown to one decimal point
     }
 
 

@@ -12,16 +12,16 @@ public class BulletHit2D : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(damageTag))
+        if (other.CompareTag(damageTag))        // These if statements are to determine different strengths and effects for different shot types
         {
             other.SendMessage("TakeDamage", damage);
 
-            if(this.gameObject.name == "Bolt(Clone)")
+            if(this.gameObject.name == "Bolt(Clone)")       // Effects for regular bolt       
             {
                 other.SendMessage("GetStunDuration", 0.2f);
                 other.SendMessage("GetStunStrength", 4);
             }
-            else if(this.gameObject.name == "ShotgunBolt(Clone)")
+            else if(this.gameObject.name == "ShotgunBolt(Clone)")       // Shotgun stuns for longer
             {
                 other.SendMessage("GetStunDuration", 0.4f);
                 other.SendMessage("GetStunStrength", 4);

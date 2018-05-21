@@ -14,7 +14,7 @@ public class EnemyAttack : MonoBehaviour
     
     public bool playerInRange;                   
     float timer;
-    bool isSwordInStartingPos = false;      // This is sued to determine which version of the animation should be played
+    bool isSwordInStartingPos = false;      // This is used to determine which version of the animation should be played
 
     private int animationAttackState;
 

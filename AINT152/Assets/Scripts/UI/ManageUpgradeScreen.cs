@@ -7,13 +7,16 @@ public class ManageUpgradeScreen : MonoBehaviour {
 
     private RectTransform[] childrenPanels;
 
-	public void EnableUpgradeScreen()
+    public void EnableUpgradeScreen()
     {
         childrenPanels = GetComponentsInChildren<RectTransform>(true);
 
         foreach (RectTransform panel in childrenPanels)
         {
-            panel.gameObject.SetActive(true);
+            if(panel.gameObject.tag != "OptionalUpgrade")
+            {
+                panel.gameObject.SetActive(true);
+            }           
         }
     }
 

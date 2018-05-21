@@ -133,6 +133,8 @@ public class GameUI : MonoBehaviour
             waveVictory = false;
             waveScreen.gameObject.SetActive(false);
 
+            upgradeScreenScript.DisableUpgradeScreen();
+
             controller.LoadNextLevel();
         }
     }

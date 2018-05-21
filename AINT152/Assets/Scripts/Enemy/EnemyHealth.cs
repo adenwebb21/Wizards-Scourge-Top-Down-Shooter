@@ -29,7 +29,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        if (health < 1) return;
+        if (health < 1) return;     // Prevents some odd glitches that result from hitting the enemy multiple times
 
         health -= damage;
         onTakeDamage.Invoke();
@@ -44,7 +44,7 @@ public class EnemyHealth : MonoBehaviour
         }       
     }
 
-    public void SlowDown()
+    public void SlowDown()      // A slowdown effect to add "juice" to the impacts
     {
         if(movementparent.maxSpeed == currentEnemyMaxSpeed)
         {
@@ -54,6 +54,7 @@ public class EnemyHealth : MonoBehaviour
         }       
     }
 
+    // The following two functions are used to circumvent the inability to pass two variables through a sendmessage
     public void GetStunDuration(float duration)
     {
         stunDuration = duration;
@@ -64,14 +65,14 @@ public class EnemyHealth : MonoBehaviour
         stunStrength = strength;
     }
 
-    public void SpeedUp()
+    public void SpeedUp()       // Revert to normal speed
     {
         movementparent.maxSpeed = currentEnemyMaxSpeed;
     }
 
     void DropStuff()        // Drop health based on probabilities
     {
-        if(Random.Range(0, 100) <= 30)      // 50% chance to spawn anything
+        if(Random.Range(0, 100) <= 40)      // 40% chance to spawn anything
         {
             if(Random.Range(0, 100) <= 80)      // If anything is spawned, 80% chance that it's just one
             {

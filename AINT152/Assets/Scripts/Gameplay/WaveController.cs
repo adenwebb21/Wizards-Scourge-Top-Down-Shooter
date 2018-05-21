@@ -50,7 +50,7 @@ public class WaveController : MonoBehaviour {
         GameObject[] allShots = GameObject.FindGameObjectsWithTag("Bolt");
         GameObject[] allPickups = GameObject.FindGameObjectsWithTag("Pickup");
 
-        foreach (GameObject obj in allShots)
+        foreach (GameObject obj in allShots)        // Clear out shots and health drops from the level
         {
             Destroy(obj);
         }

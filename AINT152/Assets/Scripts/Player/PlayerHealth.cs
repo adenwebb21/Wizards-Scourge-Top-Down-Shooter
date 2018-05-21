@@ -28,7 +28,7 @@ public class PlayerHealth : MonoBehaviour
         health = 100;
     }
 
-    private void Update()
+    private void Update()       // Update here is only used if the player has the regenerating upgrade
     {
         if (timer >= 0)
         {
@@ -74,13 +74,13 @@ public class PlayerHealth : MonoBehaviour
 
     public void RefillHealth()      // From upgrades
     {
-        if (health >= maxHealth - 50 && health != maxHealth)        // Ensures that the health doesn't go over max 
+        if (health >= maxHealth - 100 && health != maxHealth)        // Ensures that the health doesn't go over max 
         {
             health = maxHealth;
         }
         else
         {
-            health += 50;
+            health += 100;
         }
 
         SendHealthData();
@@ -88,7 +88,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void IncreaseMaxHealth()     // Accessed from upgrades
     {
-        maxHealth += 25;
+        maxHealth += 50;
         SendHealthData();
     }
 
@@ -106,7 +106,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)      // Fall down the pit
     {
         if(collision.collider.tag == "Pit")
         {

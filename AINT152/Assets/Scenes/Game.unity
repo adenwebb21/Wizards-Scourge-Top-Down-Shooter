@@ -203,7 +203,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 3.1953125
+  orthographic size: 2.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2584,7 +2584,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.29151633, y: 0.7223615}
   m_AnchorMax: {x: 0.70751524, y: 0.9480001}
-  m_AnchoredPosition: {x: -0.5, y: 0.06896973}
+  m_AnchoredPosition: {x: -0.5, y: 0.068847656}
   m_SizeDelta: {x: 1.2000122, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493588320
@@ -4844,7 +4844,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 0.65
-  m_Text: "+ 25 Max \nHealth"
+  m_Text: "+ 50 Max \nHealth"
 --- !u!222 &646951741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -7524,10 +7524,10 @@ RectTransform:
   m_Father: {fileID: 364246100}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -465, y: -199.2}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0.039, y: 0.12433334}
+  m_AnchorMax: {x: 0.087616704, y: 0.21166667}
+  m_AnchoredPosition: {x: 1, y: -0.19999695}
+  m_SizeDelta: {x: 48, y: 48}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &834809063
 MonoBehaviour:
@@ -9222,7 +9222,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.6212205, y: 0.22800002}
   m_AnchorMax: {x: 0.78800005, y: 0.65768254}
-  m_AnchoredPosition: {x: -0.13000488, y: 1}
+  m_AnchoredPosition: {x: -0.12988281, y: 1}
   m_SizeDelta: {x: -3.1999512, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072542919
@@ -9682,6 +9682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc776e0ab4a742a4baba3eb364116757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wvCont: {fileID: 692972116}
 --- !u!1 &1147970413
 GameObject:
   m_ObjectHideFlags: 0
@@ -14275,7 +14276,7 @@ RectTransform:
   m_GameObject: {fileID: 1337518036}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.18, y: 0.2, z: 1}
+  m_LocalScale: {x: 0.17, y: 0.2, z: 1}
   m_Children: []
   m_Father: {fileID: 684019153}
   m_RootOrder: 0
@@ -14317,7 +14318,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: + 50 Health
+  m_Text: + 100 Health
 --- !u!222 &1337518039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15334,7 +15335,7 @@ GameObject:
   - component: {fileID: 1450921884}
   m_Layer: 5
   m_Name: HealthRegen
-  m_TagString: Untagged
+  m_TagString: OptionalUpgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15620,7 +15621,7 @@ GameObject:
   - component: {fileID: 1478696728}
   m_Layer: 5
   m_Name: +1Scatter
-  m_TagString: Untagged
+  m_TagString: OptionalUpgrade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21542,7 +21543,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.21248038, y: 0.22800002}
   m_AnchorMax: {x: 0.3782206, y: 0.65768254}
-  m_AnchoredPosition: {x: 1.3800049, y: 1}
+  m_AnchoredPosition: {x: 1.3798828, y: 1}
   m_SizeDelta: {x: -1.1999512, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2097722811

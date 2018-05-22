@@ -13,6 +13,7 @@ Assignment - Unity 2D Zombie Shooter
 Credits
 
 Pixel perfect camera - https://github.com/cmilr/DeadSimple-Pixel-Perfect-Camera
+
 A* Pathfinding algorithm - https://arongranberg.com/astar/
 
 
